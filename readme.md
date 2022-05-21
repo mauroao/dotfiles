@@ -8,4 +8,8 @@ My configuration recovery (for MAC)
  git clone git@github.com:mauroao/dotfiles.git $HOME/.dotfiles
 ```
 
+## Install:
+
+```
 source ./install.sh
+```
