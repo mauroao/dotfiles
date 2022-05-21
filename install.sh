@@ -1,3 +1,4 @@
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
-curl https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh --output $HOME/.git-prompt.sh
+ln -s $HOME/.dotfiles/.vimrc $HOME/.vimrc
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh  --output $HOME/.git-prompt.sh
 
