@@ -1,3 +1,6 @@
 [user]
 	name = Mauro Oliveira
 	email = mauro.anselmo.oliveira@gmail.com
+[alias]
+	gp = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
+
