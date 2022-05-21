@@ -16,3 +16,7 @@ setopt PROMPT_SUBST ; PS1='%n@%m %B%{$fg[blue]%}%c%{$reset_color%}%b$(__git_ps1 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWCOLORHINTS=1
+
+#Alias
+
+alias ll="ls -la"
