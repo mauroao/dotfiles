@@ -10,9 +10,10 @@ export LSCOLORS=ExFxxxxxCxxxxxxxxxExEx
 
 # Prompt:
 # (from https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh)
+# (from https://zsh-prompt-generator.site)
 source ~/.git-prompt.sh
 NEWLINE=$'\n'
-setopt PROMPT_SUBST ; PS1='%n@%m %B%{$fg[blue]%}%c%{$reset_color%}%b$(__git_ps1 " ( %s)") ${NEWLINE}ﬦ '
+setopt PROMPT_SUBST ; PS1='%n@%m %B%{$fg[blue]%}%c%{$reset_color%}%b$(__git_ps1 " ( %s)") ${NEWLINE}%B%F{166}ﬦ%f%b '
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWCOLORHINTS=1
@@ -20,3 +21,5 @@ export GIT_PS1_SHOWCOLORHINTS=1
 #Alias
 
 alias ll="ls -la"
+
+
