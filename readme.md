@@ -11,5 +11,5 @@ My configuration recovery (for MAC)
 ## Install:
 
 ```
-source ~/.dotfiles/.install.sh
+source ~/.dotfiles/install.sh
 ```
