@@ -1,6 +1,11 @@
 # :page_facing_up: DotFiles
 
-My configuration recovery (for MAC)
+My environment configuration recovery (for MAC)
+
+## Prerequisites:
+
+- https://www.nerdfonts.com
+- https://iterm2.com (for MAC)
 
 ## Clone it:
 
