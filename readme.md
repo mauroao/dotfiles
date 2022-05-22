@@ -1,4 +1,4 @@
-# DotFiles
+# :page_facing_up: DotFiles
 
 My configuration recovery (for MAC)
 
