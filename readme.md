@@ -5,11 +5,11 @@ My configuration recovery (for MAC)
 ## Clone it:
 
 ```
- git clone git@github.com:mauroao/dotfiles.git $HOME/.dotfiles
+ git clone git@github.com:mauroao/dotfiles.git ~/.dotfiles
 ```
 
 ## Install:
 
 ```
-source ./install.sh
+source ~/.dotfiles/.install.sh
 ```
