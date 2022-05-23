@@ -1,6 +1,7 @@
 # DotFiles
 
-My environment configuration recovery (for MAC)
+The goal of this project is to provide all required "dot files" to setup a fresh computer environment.  
+Theese scripts works well with MAC OS Catalina and Ubuntu 20.04. 
 
 ## Prerequisites:
 
