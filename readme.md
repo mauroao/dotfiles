@@ -9,8 +9,13 @@ My environment configuration recovery (for MAC)
 
 ## Clone it:
 
+Using ssh:
 ```
  git clone git@github.com:mauroao/dotfiles.git ~/.dotfiles
+```
+Or using http:
+```
+git clone https://github.com/mauroao/dotfiles.git ~/.dotfiles
 ```
 
 ## Install:
