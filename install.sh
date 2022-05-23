@@ -4,7 +4,7 @@ else
     IS_MAC=false
 fi
 
-if [[ $IS_MAC ]]; then
+if [[ $IS_MAC = "true" ]]; then
     echo "OS Type = MAC"
 else
     echo "OS Type = Linux"
@@ -26,7 +26,7 @@ create_symbolic_link ".vimrc"
 create_symbolic_link ".gitconfig"
 download_file "git-prompt.sh"
 
-if [[ $IS_MAC ]]; then
+if [[ $IS_MAC = "true" ]]; then
     create_symbolic_link ".zshrc"
 else
     download_file "git-completion.bash"
