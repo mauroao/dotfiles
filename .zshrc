@@ -13,7 +13,7 @@ export LSCOLORS=ExFxxxxxCxxxxxxxxxExEx
 # (from https://zsh-prompt-generator.site)
 source ~/.git-prompt.sh
 NEWLINE=$'\n'
-setopt PROMPT_SUBST ; PS1='%n@%m %B%F{blue}%d%f%b $(__git_ps1 "( %s)") ${NEWLINE}%B%F{166}ﬦ%f%b '
+setopt PROMPT_SUBST ; PS1='%n@%m %B%F{blue}%d%f%b $(__git_ps1 "( %s)") ${NEWLINE}%B%F{166}λ%f%b '
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
