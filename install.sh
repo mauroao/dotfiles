@@ -10,7 +10,7 @@ function download_file() {
     echo "downloaded $1"
 }
 
-if [[ $OS_TYPE == "darwin"* ]]; then
+if [[ $OSTYPE == "darwin"* ]]; then
     IS_MAC=true
     echo "OS Type = MAC"
 else
@@ -22,7 +22,7 @@ create_symbolic_link ".vimrc"
 create_symbolic_link ".gitconfig"
 download_file "git-prompt.sh"
 
-if [[ $IS_MAC = "true" ]]; then
+if [[ $IS_MAC == "true" ]]; then
     create_symbolic_link ".zshrc"
 else
     download_file "git-completion.bash"
