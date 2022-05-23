@@ -22,13 +22,12 @@ function download_file() {
     echo "downloaded $1"
 }
 
+create_symbolic_link ".vimrc"
+create_symbolic_link ".gitconfig"
+download_file "git-prompt.sh"
+
 if [[ $IS_MAC ]]; then
     create_symbolic_link ".zshrc"
 else
     download_file "git-completion.bash"
 fi
-
-create_symbolic_link ".vimrc"
-create_symbolic_link ".gitconfig"
-download_file "git-prompt.sh"
-
