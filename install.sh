@@ -26,4 +26,7 @@ if [[ $IS_MAC == "true" ]]; then
     create_symbolic_link ".zshrc"
 else
     download_file "git-completion.bash"
+    if ! grep -q "source ~/.git-completion.bash" ~/.bashrc; then
+        cat ~/.dotfiles/dotfiles/.bashrc >> ~/.bashrc
+    fi
 fi
