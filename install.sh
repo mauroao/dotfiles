@@ -1,6 +1,6 @@
 function create_symbolic_link() {
     rm -rf ~/"$1"
-    ln -s ~/.dotfiles/"$1" ~/"$1"
+    ln -s ~/.dotfiles/dotfiles/"$1" ~/"$1"
     echo "created link $1"
 }
 
