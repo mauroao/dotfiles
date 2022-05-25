@@ -1,7 +1,7 @@
 function create_symbolic_link() {
-    rm -rf ~/"$1"
-    ln -s ~/.dotfiles/dotfiles/"$1" ~/"$1"
-    echo "created link $1"
+    rm -rf $2
+    ln -s $1 $2
+    echo "created link $2"
 }
 
 function download_file() {
@@ -18,15 +18,19 @@ else
     echo "OS Type = Linux"
 fi
 
-create_symbolic_link ".vimrc"
-create_symbolic_link ".gitconfig"
+create_symbolic_link ~/.dotfiles/dotfiles/.vimrc ~/.vimrc
+create_symbolic_link ~/.dotfiles/dotfiles/.gitconfig ~/.gitconfig
 download_file "git-prompt.sh"
 
 if [[ $IS_MAC == "true" ]]; then
-    create_symbolic_link ".zshrc"
+    create_symbolic_link ~/.dotfiles/dotfiles/.zshrc ~/.zshrc
 else
     download_file "git-completion.bash"
     if ! grep -q "source ~/.git-completion.bash" ~/.bashrc; then
         cat ~/.dotfiles/dotfiles/.bashrc >> ~/.bashrc
     fi
 fi
+
+mkdir -p ~/.config/nvim
+create_symbolic_link ~/.dotfiles/dotfiles/.vimrc ~/.config/nvim/init.vim
+
