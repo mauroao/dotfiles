@@ -10,7 +10,7 @@ These scripts works fine with both MAC OS Catalina and Ubuntu 20.04 operating sy
 - git
 - curl
 - vim
-- nvim
+- neovim
 
 ## Clone it:
 
