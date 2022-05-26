@@ -7,6 +7,7 @@ These scripts works fine with both MAC OS Catalina and Ubuntu 20.04 operating sy
 
 - https://www.nerdfonts.com
 - https://iterm2.com (for MAC)
+- git
 - curl
 - vim
 - nvim
