@@ -26,5 +26,5 @@ git clone https://github.com/mauroao/dotfiles.git ~/.dotfiles
 ## Install it:
 
 ```
-source ~/.dotfiles/install.sh
+. ~/.dotfiles/install.sh
 ```
