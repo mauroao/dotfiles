@@ -28,3 +28,10 @@ git clone https://github.com/mauroao/dotfiles.git ~/.dotfiles
 ```
 . ~/.dotfiles/install.sh
 ```
+## Install NeoVim Plugins
+
+- Open nvim and run:
+```
+:PlugInstall
+```
+
