@@ -22,5 +22,6 @@ export GIT_PS1_SHOWCOLORHINTS=1
 #Alias
 
 alias ll="ls -la"
+alias vim="nvim"
 
 
