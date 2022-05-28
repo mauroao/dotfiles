@@ -3,11 +3,6 @@
 autoload -Uz compinit && compinit
 autoload -U colors && colors
 
-# Directory and files colors:
-# (from https://geoff.greer.fm/lscolors/)
-export CLICOLOR=1
-export LSCOLORS=ExFxxxxxCxxxxxxxxxExEx
-
 # Prompt:
 # (from https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh)
 # (from https://zsh-prompt-generator.site)
@@ -19,10 +14,11 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWCOLORHINTS=1
 
+export GIT_EDITOR=vim
+
 #Alias
 
 alias ls="ls --color=auto"
 alias ll="ls -la"
 alias vim="nvim"
-
 
