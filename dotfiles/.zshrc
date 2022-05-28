@@ -22,6 +22,10 @@ export GIT_EDITOR=nvim
 
 #Alias
 
+if [[ "$OSTYPE" == "linux"* ]]; then
+    alias ls="ls --color=auto" 
+fi
+
 alias ll="ls -la "
 alias vim="nvim"
 
