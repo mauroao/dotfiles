@@ -16,30 +16,13 @@ function download_vim_plug() {
     echo "downloaded vim plug"
 }
 
-if [[ $OSTYPE == "darwin"* ]]; then
-    IS_MAC=true
-    echo "OS Type = MAC"
-else
-    IS_MAC=false
-    echo "OS Type = Linux"
-fi
+download_git_file "git-prompt.sh"
+download_vim_plug
 
+create_symbolic_link ~/.dotfiles/dotfiles/.zshrc ~/.zshrc
 create_symbolic_link ~/.dotfiles/dotfiles/.vimrc ~/.vimrc
 create_symbolic_link ~/.dotfiles/dotfiles/.gitconfig ~/.gitconfig
-download_git_file "git-prompt.sh"
-
-if [[ $IS_MAC == "true" ]]; then
-    create_symbolic_link ~/.dotfiles/dotfiles/.zshrc ~/.zshrc
-else
-    download_git_file "git-completion.bash"
-    if ! grep -q "source ~/.git-completion.bash" ~/.bashrc; then
-        cat ~/.dotfiles/dotfiles/.bashrc >> ~/.bashrc
-    fi
-fi
 
 mkdir -p ~/.config/nvim
 create_symbolic_link ~/.dotfiles/dotfiles/.vimrc ~/.config/nvim/init.vim
-
-download_vim_plug
-
 
