@@ -3,6 +3,7 @@
 autoload -Uz compinit && compinit
 autoload -U colors && colors
 
+# Colors:
 # (from: https://www.cyberciti.biz/faq/apple-mac-osx-terminal-color-ls-output-option/)
 export CLICOLOR=1
 export LSCOLORS=ExFxxxxxCxxxxxxxxxExEx
@@ -20,8 +21,7 @@ export GIT_PS1_SHOWCOLORHINTS=1
 
 export GIT_EDITOR=nvim
 
-#Alias
-
+#Alias:
 if [[ "$OSTYPE" == "linux"* ]]; then
     alias ls="ls --color=auto" 
 fi
