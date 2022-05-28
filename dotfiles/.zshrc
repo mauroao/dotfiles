@@ -3,6 +3,10 @@
 autoload -Uz compinit && compinit
 autoload -U colors && colors
 
+# (from: https://www.cyberciti.biz/faq/apple-mac-osx-terminal-color-ls-output-option/)
+export CLICOLOR=1
+export LSCOLORS=ExFxxxxxCxxxxxxxxxExEx
+
 # Prompt:
 # (from https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh)
 # (from https://zsh-prompt-generator.site)
@@ -18,7 +22,6 @@ export GIT_EDITOR=nvim
 
 #Alias
 
-alias ls="ls --color=auto"
-alias ll="ls -la"
+alias ll="ls -la "
 alias vim="nvim"
 
