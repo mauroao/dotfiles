@@ -19,6 +19,7 @@ brew install neovim
 
 ## Prerequisites for Ubuntu 20.04 on WSL:
 
+- Install NERD FONTS from [here](fonts/);
 - Install [WSL](https://docs.microsoft.com/en-us/windows/wsl/install);
 - Install [Ubuntu](https://apps.microsoft.com/store/detail/ubuntu-2004/9N6SVWS3RX71?hl=pt-br&gl=BR);
 - Open Ubuntu and run above commands:
