@@ -1,19 +1,41 @@
 # Mauro's DotFiles
 
 The goal of this project is to provide all required "dot files" to setup a fresh new computer environment, **running on ZSH** shell.  
-These scripts works fine with:
-- MAC OS Catalina;
-- MAC OS Monterey;
-- Ubuntu 20.04 running on WSL;
 
-## Prerequisites:
+## Prerequisites for MAC: 
 
-- Install NERD FONTS from [here](fonts/)
-- https://iterm2.com (for MAC)
-- git
-- curl
-- vim
-- neovim
+- Install NERD FONTS from [here](fonts/);
+- Install [Homebrew](https://brew.sh)
+- Install [iTerm2](https://iterm2.com) and configure it to use NERD FONTS;
+- Run above commands:
+```
+brew update
+brew install --cask iterm2
+brew install git
+brew install curl 
+brew install neovim
+```
+- Configura iTerm2 to use NERD FONTS;
+
+## Prerequisites for Ubuntu 20.04 on WSL:
+
+- Install [WSL](https://docs.microsoft.com/en-us/windows/wsl/install);
+- Install [Ubuntu](https://apps.microsoft.com/store/detail/ubuntu-2004/9N6SVWS3RX71?hl=pt-br&gl=BR);
+- Open Ubuntu and run above commands:
+```
+sudo apt update
+sudo apt install zsh -y
+sudo apt install git -y
+sudo apt install curl -y
+sudo apt install neovim -y
+sudo chsh -s $(which zsh)
+```
+- Install [Hyper](https://hyper.is) and configure it to use NERD FONTS;
+- Configure Hyper like above:
+```
+shell: 'wsl.exe',
+shellArgs: ['-d', 'Ubuntu-20.04', '--cd', '~'],
+```
 
 ## Clone it:
 
@@ -37,4 +59,7 @@ git clone https://github.com/mauroao/dotfiles.git ~/.dotfiles
 ```
 :PlugInstall
 ```
-
+This script works fine with:
+- MAC OS Catalina;
+- MAC OS Monterey;
+- Ubuntu 20.04 running on WSL;
