@@ -6,7 +6,6 @@ The goal of this project is to provide all required "dot files" to setup a fresh
 
 - Install NERD FONTS from [here](fonts/);
 - Install [Homebrew](https://brew.sh)
-- Install [iTerm2](https://iterm2.com) and configure it to use NERD FONTS;
 - Run above commands:
 ```
 brew update
@@ -15,7 +14,7 @@ brew install git
 brew install curl 
 brew install neovim
 ```
-- Configura iTerm2 to use NERD FONTS;
+- Configure iTerm2 to use NERD FONTS;
 
 ## Prerequisites for Ubuntu 20.04 on WSL:
 
