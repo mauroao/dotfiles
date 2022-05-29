@@ -1,11 +1,14 @@
-# DotFiles
+# Mauro's DotFiles
 
-The goal of this project is to provide all required "dot files" to setup a fresh new computer environment.  
-These scripts works fine with both MAC OS Catalina and Ubuntu 20.04 operating systems.
+The goal of this project is to provide all required "dot files" to setup a fresh new computer environment, **running on ZSH** shell.  
+These scripts works fine with:
+- MAC OS Catalina;
+- MAC OS Monterey;
+- Ubuntu 20.04 running on WSL;
 
 ## Prerequisites:
 
-- https://www.nerdfonts.com
+- Install NERD FONTS from [here](fonts/)
 - https://iterm2.com (for MAC)
 - git
 - curl
