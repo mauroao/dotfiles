@@ -20,6 +20,12 @@ function install_packer {
         2>/dev/null
 }
 
+function install_autosuggestions {
+    git clone https://github.com/zsh-users/zsh-autosuggestions\ 
+        ~/.zsh/zsh-autosuggestions\
+        2>/dev/null
+}
+
 download_git_file "git-prompt.sh"
 
 create_symbolic_link ~/.dotfiles/dotfiles/.zshrc ~/.zshrc
@@ -35,4 +41,4 @@ create_symbolic_link ~/.dotfiles/dotfiles/plugins.lua ~/.config/nvim/lua/plugins
 
 install_packer
 
-
+install_autosuggestions 

@@ -29,3 +29,5 @@ fi
 alias ll="ls -la "
 alias vim="nvim"
 
+# Run autosuggestions:
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
