@@ -21,7 +21,7 @@ function install_packer {
 }
 
 function install_autosuggestions {
-    git clone https://github.com/zsh-users/zsh-autosuggestions\ 
+    git clone https://github.com/zsh-users/zsh-autosuggestions\
         ~/.zsh/zsh-autosuggestions\
         2>/dev/null
 }
