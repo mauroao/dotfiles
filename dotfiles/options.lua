@@ -38,3 +38,9 @@ vim.cmd([[colorscheme vscode]])
 require'nvim-tree'.setup {
     open_on_setup = true
 }
+
+-- Change leader to a comma
+vim.g.mapleader = ','
+
+-- Keymaping
+vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true } )
