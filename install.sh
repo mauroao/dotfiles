@@ -1,3 +1,7 @@
+# temporary clean old files:
+rm -rf ~/.config/nvim/init.vim
+rm -rf ~/.config/nvim/lua
+
 function create_symbolic_link() {
     rm -rf $2
     ln -s $1 $2
@@ -10,19 +14,25 @@ function download_git_file() {
     echo "downloaded $1"
 }
 
-function download_vim_plug() {
-    sh -c 'curl --silent -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-    echo "downloaded vim plug"
+function install_packer {
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+        ~/.local/share/nvim/site/pack/packer/start/packer.nvim\
+        2>/dev/null
 }
 
 download_git_file "git-prompt.sh"
-download_vim_plug
 
 create_symbolic_link ~/.dotfiles/dotfiles/.zshrc ~/.zshrc
 create_symbolic_link ~/.dotfiles/dotfiles/.vimrc ~/.vimrc
 create_symbolic_link ~/.dotfiles/dotfiles/.gitconfig ~/.gitconfig
 
 mkdir -p ~/.config/nvim
-create_symbolic_link ~/.dotfiles/dotfiles/.vimrc ~/.config/nvim/init.vim
+mkdir -p ~/.config/nvim/lua
+
+create_symbolic_link ~/.dotfiles/dotfiles/init.lua ~/.config/nvim/init.lua
+create_symbolic_link ~/.dotfiles/dotfiles/options.lua ~/.config/nvim/lua/options.lua
+create_symbolic_link ~/.dotfiles/dotfiles/plugins.lua ~/.config/nvim/lua/plugins.lua
+
+install_packer
+
 

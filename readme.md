@@ -57,7 +57,7 @@ git clone https://github.com/mauroao/dotfiles.git ~/.dotfiles
 
 - Open nvim and run:
 ```
-:PlugInstall
+:PackerSync
 ```
 This script works fine with:
 - MAC OS Catalina;
