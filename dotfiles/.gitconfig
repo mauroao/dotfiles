@@ -2,7 +2,6 @@
     name = Mauro Oliveira
     email = mauro.anselmo.oliveira@gmail.com
 [alias]
-    gp = "!git push -u origin $(git rev-parse --abbrev-ref HEAD)"
-    ac = "!git add -A && git commit"
-
-
+    p = "!git push -u origin $(git rev-parse --abbrev-ref HEAD)"
+    c = "!git add -A && git commit"
+    s = "status"

@@ -28,6 +28,7 @@ fi
 
 alias ll="ls -la "
 alias vim="nvim"
+alias g="git"
 
 # Run autosuggestions:
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
