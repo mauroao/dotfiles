@@ -17,5 +17,9 @@ return require('packer').startup(function()
             'kyazdani42/nvim-web-devicons', -- optional, for file icon
         },
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
-    }
+   }
+   
+    -- https://github.com/windwp/nvim-autopairs
+    use 'windwp/nvim-autopairs'
+    
 end)
