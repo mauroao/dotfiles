@@ -38,6 +38,7 @@ mkdir -p ~/.config/nvim/lua
 create_symbolic_link ~/.dotfiles/dotfiles/init.lua ~/.config/nvim/init.lua
 create_symbolic_link ~/.dotfiles/dotfiles/options.lua ~/.config/nvim/lua/options.lua
 create_symbolic_link ~/.dotfiles/dotfiles/plugins.lua ~/.config/nvim/lua/plugins.lua
+create_symbolic_link ~/.dotfiles/dotfiles/keymappings.lua ~/.config/nvim/lua/keymappings.lua
 
 install_packer
 
