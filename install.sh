@@ -39,6 +39,7 @@ create_symbolic_link ~/.dotfiles/dotfiles/init.lua ~/.config/nvim/init.lua
 create_symbolic_link ~/.dotfiles/dotfiles/options.lua ~/.config/nvim/lua/options.lua
 create_symbolic_link ~/.dotfiles/dotfiles/plugins.lua ~/.config/nvim/lua/plugins.lua
 create_symbolic_link ~/.dotfiles/dotfiles/keymappings.lua ~/.config/nvim/lua/keymappings.lua
+create_symbolic_link ~/.dotfiles/dotfiles/setup.lua ~/.config/nvim/lua/setup.lua
 
 install_packer
 

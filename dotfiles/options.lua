@@ -32,16 +32,3 @@ opt.shiftwidth = 4          -- Shift 4 spaces when tab
 opt.tabstop = 4             -- 1 tab == 4 spaces
 opt.smartindent = true      -- Autoindent new lines
 
-vim.cmd([[colorscheme vscode]])
-
--- empty setup using defaults: add your own options
-require'nvim-tree'.setup {
-    open_on_setup = true
-}
-
--- Change leader to a comma
-vim.g.mapleader = ','
-
--- Autopairs
-require('nvim-autopairs').setup{}
-
