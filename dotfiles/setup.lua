@@ -9,3 +9,5 @@ require'nvim-tree'.setup {
 -- Autopairs
 require('nvim-autopairs').setup{}
 
+-- Lualine
+require('lualine').setup()

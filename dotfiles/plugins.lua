@@ -21,5 +21,8 @@ return require('packer').startup(function()
    
     -- https://github.com/windwp/nvim-autopairs
     use 'windwp/nvim-autopairs'
+
+    -- https://github.com/nvim-lualine/lualine.nvim
+    use 'nvim-lualine/lualine.nvim'
     
 end)
