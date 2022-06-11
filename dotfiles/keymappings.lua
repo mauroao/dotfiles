@@ -1,5 +1,5 @@
--- Change leader to a comma:
-vim.g.mapleader = ','
+-- Change leader to space:
+vim.g.mapleader = ' '
 
 -- Key mappings:
 vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true } )
