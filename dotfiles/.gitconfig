@@ -7,3 +7,5 @@
     s = "status"
     d = "diff"
 
+[pull]
+	rebase = false
