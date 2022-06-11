@@ -21,6 +21,8 @@ export GIT_PS1_SHOWCOLORHINTS=1
 
 export GIT_EDITOR=nvim
 
+export SAVEHIST=1000
+
 #Alias:
 if [[ "$OSTYPE" == "linux"* ]]; then
     alias ls="ls --color=auto" 
