@@ -24,5 +24,8 @@ return require('packer').startup(function()
 
     -- https://github.com/nvim-lualine/lualine.nvim
     use 'nvim-lualine/lualine.nvim'
+
+    -- https://github.com/gpanders/editorconfig.nvim
+    use 'gpanders/editorconfig.nvim'
     
 end)
