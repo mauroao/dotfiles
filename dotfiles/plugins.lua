@@ -27,5 +27,11 @@ return require('packer').startup(function()
 
     -- https://github.com/gpanders/editorconfig.nvim
     use 'gpanders/editorconfig.nvim'
+
+    -- https://github.com/nvim-telescope/telescope.nvim
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }   
     
 end)
