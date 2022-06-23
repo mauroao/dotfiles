@@ -13,6 +13,7 @@ brew install --cask iterm2
 brew install git
 brew install curl 
 brew install neovim
+brew install ripgrep
 ```
 - Configure iTerm2 to use NERD FONTS;
 
@@ -29,6 +30,8 @@ sudo apt install git -y
 sudo apt install curl -y
 curl -sL https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.deb -o nvim-linux64.deb
 sudo apt install ./nvim-linux64.deb -y
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
+sudo dpkg -i ripgrep_13.0.0_amd64.deb
 sudo chsh -s $(which zsh)
 ```
 - Install [Hyper](https://hyper.is) and configure it to use NERD FONTS;
