@@ -11,3 +11,8 @@ vim.api.nvim_set_keymap('i', 'jj', '<ESC>', { noremap = true } )
 vim.api.nvim_set_keymap('i', 'jk', '<ESC>', { noremap = true } )
 vim.api.nvim_set_keymap('n', '<leader>ff', ':Telescope find_files<CR>', { noremap = true } )
 vim.api.nvim_set_keymap('n', '<leader>fb', ':Telescope buffers<CR>', { noremap = true } )
+vim.api.nvim_set_keymap('n', '<leader>,', ':BufferPrevious<CR>', { noremap = true } )
+vim.api.nvim_set_keymap('n', '<leader>.', ':BufferNext<CR>', { noremap = true } )
+vim.api.nvim_set_keymap('n', '<leader>z', ':BufferClose<CR>', { noremap = true } )
+
+
