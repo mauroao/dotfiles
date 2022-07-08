@@ -37,7 +37,7 @@ The goal of this project is to provide all required "dot files" to setup a fresh
 - Install [Hyper](https://hyper.is) and configure it to use NERD FONTS;
 - Configure Hyper like above:
   ```
-  fontSize: 16,
+  fontSize: 14,
   fontFamily: '"SauceCodePro Nerd Font", "MesloLGM Nerd Font", Menlo, Consolas, monospace',
   shell: 'C:\\Windows\\System32\\wsl.exe',
   shellArgs: ['zsh'],
