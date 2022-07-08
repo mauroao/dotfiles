@@ -34,3 +34,7 @@ alias g="git"
 
 # Run autosuggestions:
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Go to Home:\
+cd
+
