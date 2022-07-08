@@ -34,11 +34,6 @@ return require('packer').startup(function()
         requires = { {'nvim-lua/plenary.nvim'} }
     }   
 
-    -- https://github.com/nvim-treesitter/nvim-treesitter
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    }
     -- https://github.com/romgrk/barbar.nvim
     use {
         'romgrk/barbar.nvim',
