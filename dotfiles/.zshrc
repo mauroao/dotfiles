@@ -25,7 +25,7 @@ export SAVEHIST=1000
 
 #Alias:
 if [[ "$OSTYPE" == "linux"* ]]; then
-    alias ls="ls --color=auto" 
+    alias ls="ls --color=auto"
 fi
 
 alias ll="ls -la "
@@ -34,6 +34,11 @@ alias g="git"
 
 # Run autosuggestions:
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# NVM stuff:
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Go to Home:\
 cd
