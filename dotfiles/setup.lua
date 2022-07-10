@@ -7,109 +7,37 @@ require'nvim-tree'.setup {
 }
 
 -- Autopairs
-require('nvim-autopairs').setup{}
+require('nvim-autopairs').setup()
 
 -- Lualine
 require('lualine').setup()
 
 -- Telescope
-require('telescope').setup{
-  defaults = {
-    -- Default configuration for telescope goes here:
-    -- config_key = value,
-    mappings = {
-      i = {
-        -- map actions.which_key to <C-h> (default: <C-/>)
-        -- actions.which_key shows the mappings for your picker,
-        -- e.g. git_{create, delete, ...}_branch for the git_branches picker
-        ["<C-h>"] = "which_key"
-      }
-    }
-  },
-  pickers = {
-    -- Default configuration for builtin pickers goes here:
-    -- picker_name = {
-    --   picker_config_key = value,
-    --   ...
-    -- }
-    -- Now the picker_config_key will be applied every time you call this
-    -- builtin picker
-  },
-  extensions = {
-    -- Your extension configuration goes here:
-    -- extension_name = {
-    --   extension_config_key = value,
-    -- }
-    -- please take a look at the readme of the extension you want to configure
-  }
-}
+require('telescope').setup{}
 
 -- Set barbar's options
-require'bufferline'.setup {
-  -- Enable/disable animations
-  animation = true,
-
-  -- Enable/disable auto-hiding the tab bar when there is a single buffer
-  auto_hide = false,
-
-  -- Enable/disable current/total tabpages indicator (top right corner)
-  tabpages = true,
-
-  -- Enable/disable close button
-  closable = true,
-
-  -- Enables/disable clickable tabs
-  --  - left-click: go to buffer
-  --  - middle-click: delete buffer
-  clickable = true,
-
-  -- Excludes buffers from the tabline
-  exclude_ft = {'javascript'},
-  exclude_name = {'package.json'},
-
-  -- Enable/disable icons
-  -- if set to 'numbers', will show buffer index in the tabline
-  -- if set to 'both', will show buffer index and icons in the tabline
-  icons = true,
-
-  -- If set, the icon color will follow its corresponding buffer
-  -- highlight group. By default, the Buffer*Icon group is linked to the
-  -- Buffer* group (see Highlighting below). Otherwise, it will take its
-  -- default value as defined by devicons.
-  icon_custom_colors = false,
-
-  -- Configure icons on the bufferline.
-  icon_separator_active = '▎',
-  icon_separator_inactive = '▎',
-  icon_close_tab = '',
-  icon_close_tab_modified = '●',
-  icon_pinned = '車',
-
-  -- If true, new buffers will be inserted at the start/end of the list.
-  -- Default is to insert after current buffer.
-  insert_at_end = false,
-  insert_at_start = false,
-
-  -- Sets the maximum padding width with which to surround each tab
-  maximum_padding = 1,
-
-  -- Sets the maximum buffer name length.
-  maximum_length = 30,
-
-  -- If set, the letters for each buffer in buffer-pick mode will be
-  -- assigned based on their name. Otherwise or in case all letters are
-  -- already assigned, the behavior is to assign letters in order of
-  -- usability (see order below)
-  semantic_letters = true,
-
-  -- New buffer letters are assigned in this order. This order is
-  -- optimal for the qwerty keyboard layout but might need adjustement
-  -- for other layouts.
-  letters = 'asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERUTYQP',
-
-  -- Sets the name of unnamed buffers. By default format is "[Buffer X]"
-  -- where X is the buffer number. But only a static string is accepted here.
-  no_name_title = nil,
+require('bufferline').setup {
+    animation = true,
+    auto_hide = false,
+    tabpages = true,
+    closable = true,
+    clickable = true,
+    exclude_ft = {'javascript'},
+    exclude_name = {'package.json'},
+    icons = true,
+    icon_custom_colors = false,
+    icon_separator_active = '▎',
+    icon_separator_inactive = '▎',
+    icon_close_tab = '',
+    icon_close_tab_modified = '●',
+    icon_pinned = '車',
+    insert_at_end = false,
+    insert_at_start = false,
+    maximum_padding = 1,
+    maximum_length = 30,
+    semantic_letters = true,
+    letters = 'asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERUTYQP',
+    no_name_title = nil,
 }
 
 -- Table offset (integrating nvim-tree with barbar)
@@ -117,11 +45,68 @@ local nvim_tree_events = require('nvim-tree.events')
 local bufferline_state = require('bufferline.state')
 
 nvim_tree_events.on_tree_open(function ()
-  bufferline_state.set_offset(31, "File Tree")
+    bufferline_state.set_offset(31, "File Tree")
 end)
 
 nvim_tree_events.on_tree_close(function ()
-  bufferline_state.set_offset(0)
+    bufferline_state.set_offset(0)
 end)
 
+-- Add additional capabilities supported by nvim-cmp
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
+local lspconfig = require('lspconfig')
+
+-- Enable some language servers with the additional completion capabilities offered by nvim-cmp
+local servers = { 'pyright' }
+for _, lsp in ipairs(servers) do
+    lspconfig[lsp].setup {
+        -- on_attach = my_custom_on_attach,
+        capabilities = capabilities,
+    }
+end
+
+-- luasnip setup
+local luasnip = require 'luasnip'
+
+-- nvim-cmp setup
+local cmp = require 'cmp'
+cmp.setup {
+    snippet = {
+        expand = function(args)
+            luasnip.lsp_expand(args.body)
+        end,
+    },
+    mapping = cmp.mapping.preset.insert({
+        ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<CR>'] = cmp.mapping.confirm {
+            behavior = cmp.ConfirmBehavior.Replace,
+            select = true,
+        },
+        ['<Tab>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.select_next_item()
+            elseif luasnip.expand_or_jumpable() then
+                luasnip.expand_or_jump()
+            else
+                fallback()
+            end
+        end, { 'i', 's' }),
+        ['<S-Tab>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.select_prev_item()
+            elseif luasnip.jumpable(-1) then
+                luasnip.jump(-1)
+            else
+                fallback()
+            end
+        end, { 'i', 's' }),
+    }),
+    sources = {
+        { name = 'nvim_lsp' },
+        { name = 'luasnip' },
+    },
+}
