@@ -35,12 +35,14 @@ create_symbolic_link ~/.dotfiles/dotfiles/.gitconfig ~/.gitconfig
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/nvim/lua
 
-create_symbolic_link ~/.dotfiles/dotfiles/init.lua ~/.config/nvim/init.lua
-create_symbolic_link ~/.dotfiles/dotfiles/options.lua ~/.config/nvim/lua/options.lua
-create_symbolic_link ~/.dotfiles/dotfiles/plugins.lua ~/.config/nvim/lua/plugins.lua
-create_symbolic_link ~/.dotfiles/dotfiles/keymappings.lua ~/.config/nvim/lua/keymappings.lua
-create_symbolic_link ~/.dotfiles/dotfiles/setup.lua ~/.config/nvim/lua/setup.lua
+create_symbolic_link ~/.dotfiles/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
+create_symbolic_link ~/.dotfiles/dotfiles/nvim/lua/options.lua ~/.config/nvim/lua/options.lua
+create_symbolic_link ~/.dotfiles/dotfiles/nvim/lua/plugins.lua ~/.config/nvim/lua/plugins.lua
+create_symbolic_link ~/.dotfiles/dotfiles/nvim/lua/keymappings.lua ~/.config/nvim/lua/keymappings.lua
+create_symbolic_link ~/.dotfiles/dotfiles/nvim/lua/setup.lua ~/.config/nvim/lua/setup.lua
+create_symbolic_link ~/.dotfiles/dotfiles/nvim/lua/nvim-cmp.lua ~/.config/nvim/lua/nvim-cmp.lua
+create_symbolic_link ~/.dotfiles/dotfiles/nvim/lua/nvim-lspconfig.lua ~/.config/nvim/lua/nvim-lspconfig.lua
 
 install_packer
 
-install_autosuggestions 
+install_autosuggestions
