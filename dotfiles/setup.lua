@@ -13,7 +13,16 @@ require('nvim-autopairs').setup()
 require('lualine').setup()
 
 -- Telescope
-require('telescope').setup{}
+local actions = require('telescope.actions')
+require('telescope').setup {
+    defaults = {
+        mappings = {
+            n = {
+                ["q"] = actions.close
+            }
+        }
+    }
+}
 
 -- Set barbar's options
 require('bufferline').setup {
