@@ -28,10 +28,9 @@ The goal of this project is to provide all required "dot files" to setup a fresh
   sudo apt install zsh -y
   sudo apt install git -y
   sudo apt install curl -y
+  sudo apt install ripgrep -y
   curl -sL https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.deb -o nvim-linux64.deb
   sudo apt install ./nvim-linux64.deb -y
-  curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
-  sudo dpkg -i ripgrep_13.0.0_amd64.deb
   sudo chsh -s $(which zsh)
   ```
 - Install [Hyper](https://hyper.is) and configure it to use NERD FONTS;
