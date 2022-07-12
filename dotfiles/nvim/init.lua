@@ -4,4 +4,4 @@ require('keymappings')
 require('setup')
 require('nvim-cmp')
 require('nvim-lspconfig')
-
+require('lspsaga-nvim')

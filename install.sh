@@ -42,6 +42,7 @@ create_symbolic_link ~/.dotfiles/dotfiles/nvim/lua/keymappings.lua ~/.config/nvi
 create_symbolic_link ~/.dotfiles/dotfiles/nvim/lua/setup.lua ~/.config/nvim/lua/setup.lua
 create_symbolic_link ~/.dotfiles/dotfiles/nvim/lua/nvim-cmp.lua ~/.config/nvim/lua/nvim-cmp.lua
 create_symbolic_link ~/.dotfiles/dotfiles/nvim/lua/nvim-lspconfig.lua ~/.config/nvim/lua/nvim-lspconfig.lua
+create_symbolic_link ~/.dotfiles/dotfiles/nvim/lua/lspsaga-nvim.lua ~/.config/nvim/lua/lspsaga-nvim.lua
 
 install_packer
 
