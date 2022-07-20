@@ -40,6 +40,7 @@ The goal of this project is to provide all required "dot files" to setup a fresh
   fontFamily: '"SauceCodePro Nerd Font", "MesloLGM Nerd Font", Menlo, Consolas, monospace',
   shell: 'C:\\Windows\\System32\\wsl.exe',
   shellArgs: ['zsh'],
+  backgroundColor: '#1e1e1e',
   ```
 
 ## Clone it:
