@@ -6,7 +6,7 @@ The goal of this project is to provide all required "dot files" to setup a fresh
 
 - Install NERD FONTS from [here](fonts/);
 - Install [Homebrew](https://brew.sh)
-- Run above commands:
+- Run the commands below:
   ```
   brew update
   brew install --cask iterm2
@@ -22,7 +22,8 @@ The goal of this project is to provide all required "dot files" to setup a fresh
 - Install NERD FONTS from [here](fonts/);
 - Install [WSL](https://docs.microsoft.com/en-us/windows/wsl/install);
 - Install [Ubuntu](https://apps.microsoft.com/store/detail/ubuntu-2004/9N6SVWS3RX71?hl=pt-br&gl=BR);
-- Open Ubuntu and run above commands:
+- Install [Docker Desktop](https://www.docker.com/products/docker-desktop/);
+- Open Ubuntu and run the commands below:
   ```
   sudo apt update && \
   sudo apt install zsh -y && \
