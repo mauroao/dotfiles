@@ -44,15 +44,14 @@ The goal of this project is to provide all required "dot files" to setup a fresh
   chmod 600 ~/.ssh/id_rsa
   ```
   
-- Install [Hyper](https://hyper.is) and configure it to use NERD FONTS;
-- Configure Hyper like above:
-  ```
-  fontSize: 14,
-  fontFamily: '"SauceCodePro Nerd Font", "MesloLGM Nerd Font", Menlo, Consolas, monospace',
-  shell: 'C:\\Windows\\System32\\wsl.exe',
-  shellArgs: ['zsh'],
-  backgroundColor: '#1e1e1e',
-  ```
+- Install Windows Terminal from Microsoft Store;
+- Configure Ubuntu 20.04.4 LTS on Windows Terminal:
+  - Command line: `C:\WINDOWS\system32\wsl.exe -d Ubuntu-20.04 zsh`
+  - Appearance:
+    - Font face: SauceCodePro Nerd Font;
+    - Font size: 13;
+    - Color Scheme: Tango Dark;
+    - Font weight: Medium
 
 ## Clone it:
 
