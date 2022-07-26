@@ -32,7 +32,7 @@ The goal of this project is to provide all required "dot files" to setup a fresh
   curl -sL https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.deb -o nvim-linux64.deb && \
   sudo apt install ./nvim-linux64.deb -y && \
   sudo apt install gcc -y && \
-  sudo atp install g++ -y && \
+  sudo apt install g++ -y && \
   sudo chsh -s $(which zsh)
   ```
 - Install [Hyper](https://hyper.is) and configure it to use NERD FONTS;
