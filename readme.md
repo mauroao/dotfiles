@@ -24,13 +24,15 @@ The goal of this project is to provide all required "dot files" to setup a fresh
 - Install [Ubuntu](https://apps.microsoft.com/store/detail/ubuntu-2004/9N6SVWS3RX71?hl=pt-br&gl=BR);
 - Open Ubuntu and run above commands:
   ```
-  sudo apt update
-  sudo apt install zsh -y
-  sudo apt install git -y
-  sudo apt install curl -y
-  sudo apt install ripgrep -y
-  curl -sL https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.deb -o nvim-linux64.deb
-  sudo apt install ./nvim-linux64.deb -y
+  sudo apt update && \
+  sudo apt install zsh -y && \
+  sudo apt install git -y && \
+  sudo apt install curl -y && \
+  sudo apt install ripgrep -y && \
+  curl -sL https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.deb -o nvim-linux64.deb && \
+  sudo apt install ./nvim-linux64.deb -y && \
+  sudo apt install gcc -y && \
+  sudo atp install g++ -y && \
   sudo chsh -s $(which zsh)
   ```
 - Install [Hyper](https://hyper.is) and configure it to use NERD FONTS;
