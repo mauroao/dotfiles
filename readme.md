@@ -14,6 +14,7 @@ The goal of this project is to provide all required "dot files" to setup a fresh
   brew install curl 
   brew install neovim
   brew install ripgrep
+  brew install pyenv
   ```
 - Configure iTerm2 to use NERD FONTS;
 
