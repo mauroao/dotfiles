@@ -35,6 +35,13 @@ The goal of this project is to provide all required "dot files" to setup a fresh
   sudo apt install g++ -y && \
   sudo chsh -s $(which zsh)
   ```
+  
+- Copy SSH Keys from windows host:
+  ```
+  cp /mnt/c/Users/maurooliveira/.ssh/id* ~/.ssh/ && \
+  chmod 600 ~/.ssh/id_rsa
+  ```
+  
 - Install [Hyper](https://hyper.is) and configure it to use NERD FONTS;
 - Configure Hyper like above:
   ```
