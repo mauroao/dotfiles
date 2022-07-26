@@ -38,6 +38,8 @@ The goal of this project is to provide all required "dot files" to setup a fresh
   
 - Copy SSH Keys from windows host:
   ```
+  rm -rf ~/.ssh/ && \
+  mkdir ~/.ssh/ && \
   cp /mnt/c/Users/maurooliveira/.ssh/id* ~/.ssh/ && \
   chmod 600 ~/.ssh/id_rsa
   ```
