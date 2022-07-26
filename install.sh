@@ -26,6 +26,12 @@ function install_autosuggestions {
         2>/dev/null
 }
 
+function install_nvm {
+    if [[ ! -d ~/.nvm ]] ; then
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    fi
+}
+
 download_git_file "git-prompt.sh"
 
 create_symbolic_link ~/.dotfiles/dotfiles/.zshrc ~/.zshrc
@@ -47,3 +53,6 @@ create_symbolic_link ~/.dotfiles/dotfiles/nvim/lua/lspsaga-nvim.lua ~/.config/nv
 install_packer
 
 install_autosuggestions
+
+install_nvm
+
