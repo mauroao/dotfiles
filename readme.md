@@ -6,7 +6,7 @@ The goal of this project is to provide all required "dot files" to setup a fresh
 
 - Install NERD FONTS from [here](fonts/);
 - Install [Homebrew](https://brew.sh)
-- Run above commands:
+- Run the commands below:
   ```
   brew update
   brew install --cask iterm2
@@ -22,7 +22,8 @@ The goal of this project is to provide all required "dot files" to setup a fresh
 - Install NERD FONTS from [here](fonts/);
 - Install [WSL](https://docs.microsoft.com/en-us/windows/wsl/install);
 - Install [Ubuntu](https://apps.microsoft.com/store/detail/ubuntu-2004/9N6SVWS3RX71?hl=pt-br&gl=BR);
-- Open Ubuntu and run above commands:
+- Install [Docker Desktop](https://www.docker.com/products/docker-desktop/);
+- Open Ubuntu and run the commands below:
   ```
   sudo apt update && \
   sudo apt install zsh -y && \
@@ -44,15 +45,14 @@ The goal of this project is to provide all required "dot files" to setup a fresh
   chmod 600 ~/.ssh/id_rsa
   ```
   
-- Install [Hyper](https://hyper.is) and configure it to use NERD FONTS;
-- Configure Hyper like above:
-  ```
-  fontSize: 14,
-  fontFamily: '"SauceCodePro Nerd Font", "MesloLGM Nerd Font", Menlo, Consolas, monospace',
-  shell: 'C:\\Windows\\System32\\wsl.exe',
-  shellArgs: ['zsh'],
-  backgroundColor: '#1e1e1e',
-  ```
+- Install Windows Terminal from Microsoft Store;
+- Configure Ubuntu 20.04.4 LTS on Windows Terminal:
+  - Command line: `C:\WINDOWS\system32\wsl.exe -d Ubuntu-20.04 zsh`
+  - Appearance:
+    - Font face: SauceCodePro Nerd Font;
+    - Font size: 13;
+    - Color Scheme: Tango Dark;
+    - Font weight: Medium
 
 ## Clone it:
 
