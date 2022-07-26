@@ -21,8 +21,16 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-nvim-lua'              -- LUA source for nvim-cmp
     use 'saadparwaiz1/cmp_luasnip'          -- Snippets source for nvim-cmp
     use 'L3MON4D3/LuaSnip'                  -- Snippets plugin
+
+    -- LSP Saga:
     use ({
-            'glepnir/lspsaga.nvim',
-            branch = 'main'
-        })                                  -- LSP Saga
+        'glepnir/lspsaga.nvim',
+        branch = 'main'
+    })
+
+    -- Treesitter:
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    }
 end)
