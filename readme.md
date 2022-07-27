@@ -17,13 +17,6 @@ The goal of this project is to provide all required "dot files" to setup a fresh
   brew install pyenv
   ```
   
-- Run more commands below (prerequisites for pyenv):
-  ```
-  sudo apt update; sudo apt install -y make build-essential libssl-dev zlib1g-dev \
-  libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
-  libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
-  ```
-  
 - Configure iTerm2 to use NERD FONTS;
 
 ## Prerequisites for Ubuntu 20.04 on WSL:
@@ -44,6 +37,13 @@ The goal of this project is to provide all required "dot files" to setup a fresh
   sudo apt install gcc -y && \
   sudo apt install g++ -y && \
   sudo chsh -s $(which zsh)
+  ```
+  
+- Run more commands below (prerequisites for pyenv):
+  ```
+  sudo apt update; sudo apt install -y make build-essential libssl-dev zlib1g-dev \
+  libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+  libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
   ```
   
 - Copy SSH Keys from windows host:
