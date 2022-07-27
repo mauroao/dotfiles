@@ -43,6 +43,11 @@ export NVM_DIR="$HOME/.nvm"
 # .NET Tools Path:
 export PATH="$HOME/.dotnet/tools/:$PATH"
 
+# Pyenv stuff:
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 # Go to Home:\
 cd
 
