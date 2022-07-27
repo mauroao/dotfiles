@@ -46,6 +46,11 @@ The goal of this project is to provide all required "dot files" to setup a fresh
   libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
   ```
   
+- Install Pyenv
+  ```
+  curl https://pyenv.run | bash
+  ```
+  
 - Copy SSH Keys from windows host:
   ```
   rm -rf ~/.ssh/ && \
