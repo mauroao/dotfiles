@@ -4,6 +4,38 @@ local luasnip = require 'luasnip'
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
+
+require("luasnip/loaders/from_vscode").lazy_load()
+
+--   פּ ﯟ   some other good icons
+local kind_icons = {
+    Text = "",
+    Method = "m",
+    Function = "",
+    Constructor = "",
+    Field = "",
+    Variable = "",
+    Class = "",
+    Interface = "",
+    Module = "",
+    Property = "",
+    Unit = "",
+    Value = "",
+    Enum = "",
+    Keyword = "",
+    Snippet = "",
+    Color = "",
+    File = "",
+    Reference = "",
+    Folder = "",
+    EnumMember = "",
+    Constant = "",
+    Struct = "",
+    Event = "",
+    Operator = "",
+    TypeParameter = "",
+}
+
 cmp.setup {
     snippet = {
         expand = function(args)
@@ -37,9 +69,21 @@ cmp.setup {
             end
         end, { 'i', 's' }),
     }),
+    formatting = {
+        fields = { "kind", "abbr", "menu" },
+        format = function(entry, vim_item)
+            vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+            vim_item.menu = ({
+                nvim_lsp = "[LSP]",
+                nvim_lua = "[NVIM_LUA]",
+                luasnip = "[Snippet]",
+            })[entry.source.name]
+            return vim_item
+        end,
+    },
     sources = {
-        { name = 'nvim_lsp' },
-        { name = 'nvim_lua' },
-        { name = 'luasnip' },
+        { name = "nvim_lsp" },
+        { name = "nvim_lua" },
+        { name = "luasnip" },
     },
 }
