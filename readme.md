@@ -61,7 +61,10 @@ The goal of this project is to provide all required "dot files" to setup a fresh
   
 - Install Windows Terminal from Microsoft Store;
 - Configure Ubuntu 20.04.4 LTS on Windows Terminal:
-  - Command line: `C:\WINDOWS\system32\wsl.exe -d Ubuntu-20.04 zsh`
+  - Command line: 
+    ```
+    C:\WINDOWS\system32\wsl.exe -d Ubuntu-20.04 zsh
+    ```
   - Appearance:
     - Font face: SauceCodePro Nerd Font;
     - Font size: 13;
