@@ -14,3 +14,4 @@
   ```
 
 - Configure iTerm2 to use NERD FONTS;
+- Install NetCore 3.1 SDK and DotNet 6.0 SDK from [here](https://dotnet.microsoft.com/en-us/download/dotnet);
