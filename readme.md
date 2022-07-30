@@ -1,8 +1,8 @@
 # Mauro's DotFiles
 
-The goal of this project is to provide all required "dot files" to setup a fresh new computer environment, **running on ZSH** shell.  
+The goal of this project is to provide all required "dot files" to setup a fresh new computer environment, **running on ZSH** shell.
 
-## Prerequisites for MAC: 
+## Prerequisites for MAC:
 
 - Install NERD FONTS from [here](fonts/);
 - Install [Homebrew](https://brew.sh)
@@ -11,12 +11,12 @@ The goal of this project is to provide all required "dot files" to setup a fresh
   brew update
   brew install --cask iterm2
   brew install git
-  brew install curl 
+  brew install curl
   brew install neovim
   brew install ripgrep
   brew install pyenv
   ```
-  
+
 - Configure iTerm2 to use NERD FONTS;
 
 ## Prerequisites for Ubuntu 20.04 on WSL:
@@ -38,19 +38,19 @@ The goal of this project is to provide all required "dot files" to setup a fresh
   sudo apt install g++ -y && \
   sudo chsh -s $(which zsh)
   ```
-  
+
 - Run more commands below (prerequisites for pyenv):
   ```
   sudo apt update; sudo apt install -y make build-essential libssl-dev zlib1g-dev \
   libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
   libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
   ```
-  
+
 - Install Pyenv
   ```
   curl https://pyenv.run | bash
   ```
-  
+
 - Copy SSH Keys from windows host:
   ```
   rm -rf ~/.ssh/ && \
@@ -58,10 +58,10 @@ The goal of this project is to provide all required "dot files" to setup a fresh
   cp /mnt/c/Users/maurooliveira/.ssh/id* ~/.ssh/ && \
   chmod 600 ~/.ssh/id_rsa
   ```
-  
+
 - Install Windows Terminal from Microsoft Store;
 - Configure Ubuntu 20.04.4 LTS on Windows Terminal:
-  - Command line: 
+  - Command line:
     ```
     C:\WINDOWS\system32\wsl.exe -d Ubuntu-20.04 zsh
     ```
@@ -73,26 +73,27 @@ The goal of this project is to provide all required "dot files" to setup a fresh
 
 ## Clone it:
 
-Using ssh:
-```
- git clone git@github.com:mauroao/dotfiles.git ~/.dotfiles
-```
-Or using http:
-```
-git clone https://github.com/mauroao/dotfiles.git ~/.dotfiles
-```
+- Using ssh:
+  ```
+   git clone git@github.com:mauroao/dotfiles.git ~/.dotfiles
+  ```
+- Or using http:
+  ```
+  git clone https://github.com/mauroao/dotfiles.git ~/.dotfiles
+  ```
 
 ## Install it:
 
 ```
 . ~/.dotfiles/install.sh
 ```
+
 ## Install NeoVim Plugins
 
 - Open nvim and run:
-```
-:PackerSync
-```
+  ```
+  :PackerSync
+  ```
 This script works fine with:
 - MAC OS Catalina;
 - MAC OS Monterey;
@@ -100,17 +101,35 @@ This script works fine with:
 
 ## Install more stuff
 
-Node.js
-```
-nvm install 16.16.0 && nvm use 16.16.0
-```
+- Node.js
+  ```
+  nvm install 16.16.0 && nvm use 16.16.0
+  ```
 
-Python Language Server
-```
-npm install -g pyright
-```
+- Python Language Server
+  ```
+  npm install -g pyright
+  ```
 
-Typescript Language Server
-```
-npm install -g typescript typescript-language-server
-```
+- Typescript Language Server
+  ```
+  npm install -g typescript typescript-language-server
+  ```
+
+- Netcore 3.1 and Dotnet 6.0
+  ```
+  wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+  sudo dpkg -i packages-microsoft-prod.deb
+  rm packages-microsoft-prod.deb
+  ```
+
+  ```
+  sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-3.1
+  ```
+
+  ```
+  sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-6.0
+  ```
+
