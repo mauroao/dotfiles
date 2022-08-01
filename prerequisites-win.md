@@ -16,6 +16,7 @@
   sudo apt install gcc -y && \
   sudo apt install g++ -y && \
   sudo apt install python3.8-venv -y \
+  sudo apt install python3-pip -y \
   sudo chsh -s $(which zsh)
   ```
 
