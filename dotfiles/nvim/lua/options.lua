@@ -21,11 +21,20 @@ opt.splitbelow = true       -- Horizontal split to the bottom
 opt.ignorecase = true       -- Ignore case letters when search
 opt.smartcase = true        -- Ignore lowercase for the whole pattern
 opt.linebreak = true        -- Wrap on word boundary
+opt.wrap = false            -- No wrap lines
 opt.termguicolors = true    -- Enable 24-bit RGB colors
 opt.laststatus=3            -- Set global statusline
 opt.cursorline = true
 --opt.list = true
 opt.listchars = { eol = ''}
+opt.scrolloff = 10
+
+-- Turn off paste mode when leaving insert
+vim.api.nvim_create_autocmd("InsertLeave", {
+    pattern = '*',
+    command = "set nopaste"
+})
+
 -----------------------------------------------------------
 -- Tabs, indent
 -----------------------------------------------------------
