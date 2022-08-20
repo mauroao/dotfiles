@@ -48,12 +48,12 @@
   sudo apt-get install -y dotnet-sdk-6.0
   ```
 
-- Copy SSH Keys from windows host:
+- Copy SSH Keys from windows host (check windows home user):
   ```
   rm -rf ~/.ssh/ && \
   mkdir ~/.ssh/ && \
   cp /mnt/c/Users/maurooliveira/.ssh/id* ~/.ssh/ && \
-  chmod 600 ~/.ssh/id_rsa
+  chmod 600 ~/.ssh/id*
   ```
 
 - Install Windows Terminal from Microsoft Store;
