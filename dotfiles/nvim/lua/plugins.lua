@@ -25,15 +25,4 @@ return require('packer').startup(function()
     use 'saadparwaiz1/cmp_luasnip'          -- Snippets source for nvim-cmp
     use "rafamadriz/friendly-snippets"      -- a bunch of snippets to use
 
-    -- LSP Saga:
-    use ({
-        'glepnir/lspsaga.nvim',
-        branch = 'main'
-    })
-
-    -- Treesitter:
-    --use {
-    --    'nvim-treesitter/nvim-treesitter',
-    --    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-    --}
 end)

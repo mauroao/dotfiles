@@ -51,9 +51,13 @@ This script works fine with:
   ```
   npm install -g typescript typescript-language-server
   ```
-  
+
 - C# Language Server
   ```
   dotnet tool install --global csharp-ls
   ```
 
+- HTML Language Server
+  ```
+  npm install -g vscode-langservers-extracted
+  ```
