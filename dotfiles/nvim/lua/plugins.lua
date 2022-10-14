@@ -24,5 +24,6 @@ return require('packer').startup(function()
     use 'L3MON4D3/LuaSnip'                  -- Snippets plugin
     use 'saadparwaiz1/cmp_luasnip'          -- Snippets source for nvim-cmp
     use "rafamadriz/friendly-snippets"      -- a bunch of snippets to use
+    use 'folke/which-key.nvim'              -- Popup with key bindings of the command you started typing
 
 end)

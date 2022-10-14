@@ -49,6 +49,9 @@ require('bufferline').setup {
     no_name_title = nil,
 }
 
+-- Wich key
+require('which-key').setup {}
+
 -- Table offset (integrating nvim-tree with barbar)
 local nvim_tree_events = require('nvim-tree.events')
 local bufferline_state = require('bufferline.api')
