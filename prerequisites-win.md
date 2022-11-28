@@ -11,7 +11,7 @@
   sudo apt install git -y && \
   sudo apt install curl -y && \
   sudo apt install ripgrep -y && \
-  curl -sL https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.deb -o nvim-linux64.deb && \
+  curl -sL https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb -o nvim-linux64.deb && \
   sudo apt install ./nvim-linux64.deb -y && \
   sudo apt install gcc -y && \
   sudo apt install g++ -y && \
