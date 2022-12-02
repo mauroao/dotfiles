@@ -15,7 +15,7 @@ local on_attach = function(client, bufnr)
 end
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'tsserver', 'csharp_ls', 'html' }
+local servers = {'pyright', 'tsserver', 'csharp_ls', 'html' }
 
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
@@ -25,16 +25,16 @@ for _, lsp in ipairs(servers) do
 end
 
 -- Python specific settings
-lspconfig['pyright'].setup {
-  capabilities = capabilities,
-  on_attach = on_attach,
-  settings = {
-    python = {
-      analysis = {
-        diagnosticSeverityOverrides = {
-          reportTypedDictNotRequiredAccess = 'information'
-        }
-      }
-    }
-  }
-}
+-- lspconfig['pyright'].setup {
+--   capabilities = capabilities,
+--   on_attach = on_attach,
+--   settings = {
+--     python = {
+--       analysis = {
+--         diagnosticSeverityOverrides = {
+--           reportTypedDictNotRequiredAccess = 'information'
+--         }
+--       }
+--     }
+--   }
+-- }
