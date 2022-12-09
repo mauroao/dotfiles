@@ -25,5 +25,6 @@ return require('packer').startup(function()
     use 'saadparwaiz1/cmp_luasnip'          -- Snippets source for nvim-cmp
     use "rafamadriz/friendly-snippets"      -- a bunch of snippets to use
     use 'folke/which-key.nvim'              -- Popup with key bindings of the command you started typing
+    use 'RRethy/vim-illuminate'             -- Highlighting other uses of the word under the cursor
 
 end)
