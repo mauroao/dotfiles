@@ -4,15 +4,16 @@ local opt = vim.opt   -- Set options (global/buffer/windows-scoped)
 -----------------------------------------------------------
 -- General
 -----------------------------------------------------------
-opt.mouse = 'a'                       -- Enable mouse support
-opt.clipboard = 'unnamedplus'         -- Copy/paste to system clipboard
-opt.swapfile = false                  -- Don't use swapfile
+opt.mouse = 'a'                                -- Enable mouse support
+opt.clipboard:append('unnamedplus')            -- Copy/paste to system clipboard
+opt.swapfile = false                           -- Don't use swapfile
 opt.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete options
 
 -----------------------------------------------------------
 -- Neovim UI
 -----------------------------------------------------------
 opt.number = true           -- Show line number
+opt.relativenumber = true   -- Relative number
 opt.showmatch = true        -- Highlight matching parenthesis
 opt.foldmethod = 'marker'   -- Enable folding (default 'foldmarker')
 opt.colorcolumn = '80'      -- Line lenght marker at 80 columns
@@ -38,8 +39,8 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 -----------------------------------------------------------
 -- Tabs, indent
 -----------------------------------------------------------
-opt.expandtab = true        -- Use spaces instead of tabs
-opt.shiftwidth = 4          -- Shift 4 spaces when tab
 opt.tabstop = 4             -- 1 tab == 4 spaces
+opt.shiftwidth = 4          -- Shift 4 spaces when tab
+opt.expandtab = true        -- Use spaces instead of tabs
 opt.smartindent = true      -- Autoindent new lines
 
