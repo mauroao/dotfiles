@@ -27,4 +27,8 @@ return require('packer').startup(function()
     use 'folke/which-key.nvim'              -- Popup with key bindings of the command you started typing
     use 'RRethy/vim-illuminate'             -- Highlighting other uses of the word under the cursor
 
+     -- Managing & installing lsp servers
+    use("williamboman/mason.nvim")           -- In charge of managing lsp servers, linters & formatters
+    use("williamboman/mason-lspconfig.nvim") -- Bridges gap b/w mason & lspconfig
+
 end)
