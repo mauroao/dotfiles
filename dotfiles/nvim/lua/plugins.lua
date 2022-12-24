@@ -1,5 +1,5 @@
 -- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+-- vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'            -- packer manage it self
@@ -31,4 +31,12 @@ return require('packer').startup(function()
     use("williamboman/mason.nvim")           -- In charge of managing lsp servers, linters & formatters
     use("williamboman/mason-lspconfig.nvim") -- Bridges gap b/w mason & lspconfig
 
+    -- Treesitter
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+    }
 end)
