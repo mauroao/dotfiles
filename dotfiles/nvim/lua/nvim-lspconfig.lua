@@ -5,13 +5,12 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 local lspconfig = require('lspconfig')
 
 local on_attach = function(client, bufnr)
-  local bufopts = { noremap=true, buffer=bufnr }
-  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-  vim.keymap.set('n', 'gs', vim.lsp.buf.signature_help, bufopts)
-  vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
-  vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { noremap=true, buffer=bufnr, desc='(LSP) Declaration' })
+  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { noremap=true, buffer=bufnr, desc='(LSP) Definition' })
+  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { noremap=true, buffer=bufnr, desc='(LSP) Implementation' })
+  vim.keymap.set('n', 'gs', vim.lsp.buf.signature_help, { noremap=true, buffer=bufnr, desc='(LSP) Signature help' })
+  vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, { noremap=true, buffer=bufnr, desc='(LSP) Type Definition' })
+  vim.keymap.set('n', 'gr', vim.lsp.buf.references, { noremap=true, buffer=bufnr, desc='(LSP) References' })
 end
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
