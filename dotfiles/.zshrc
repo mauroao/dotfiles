@@ -43,6 +43,10 @@ export NVM_DIR="$HOME/.nvm"
 # .NET Tools Path:
 export PATH="$HOME/.dotnet/tools/:$PATH"
 
+# Deno:
+export DENO_INSTALL="/home/mauro/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 # Pyenv stuff:
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
@@ -53,6 +57,6 @@ set -o vi
 bindkey -M viins 'jj' vi-cmd-mode
 bindkey -M viins 'jk' vi-cmd-mode
 
-# Go to Home:\
+# Go to Home:
 cd
 
