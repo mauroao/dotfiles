@@ -87,7 +87,7 @@ mason_lspconfig.setup({
   ensure_installed = {
     'pyright',
     'tsserver',
-    'csharp_ls',
+    'omnisharp',
     'html',
     'sumneko_lua'
   },

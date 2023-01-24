@@ -5,6 +5,7 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 local lspconfig = require('lspconfig')
 
 local on_attach = function(client, bufnr)
+  vim.keymap.set('n', 'gh', vim.lsp.buf.hover, { noremap=true, buffer=bufnr, desc='(LSP) Hover' })
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { noremap=true, buffer=bufnr, desc='(LSP) Declaration' })
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { noremap=true, buffer=bufnr, desc='(LSP) Definition' })
   vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { noremap=true, buffer=bufnr, desc='(LSP) Implementation' })
@@ -14,7 +15,7 @@ local on_attach = function(client, bufnr)
 end
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = {'pyright', 'tsserver', 'csharp_ls', 'html'}
+local servers = {'pyright', 'tsserver', 'omnisharp', 'html'}
 
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
