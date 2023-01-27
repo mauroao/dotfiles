@@ -1,5 +1,10 @@
 -- Color Scheme:
-vim.cmd([[colorscheme vscode]])
+-- vim.cmd([[colorscheme vscode]])
+
+require('onedark').setup {
+   style = 'darker'
+}
+require('onedark').load()
 
 -- Nvim Tree:
 require'nvim-tree'.setup {

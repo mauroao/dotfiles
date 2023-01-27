@@ -8,6 +8,7 @@ return require('packer').startup(function()
   use 'nvim-lua/plenary.nvim'             -- used by other plugins
 
   use 'Mofiqul/vscode.nvim'               -- VSCode like theme
+  use 'navarasu/onedark.nvim'             -- Dark and Light Themes based on Atom One Dark
   use 'kyazdani42/nvim-tree.lua'          -- File tree
   use 'windwp/nvim-autopairs'             -- Open/close brackets
   use 'nvim-lualine/lualine.nvim'         -- Vim Status bar
