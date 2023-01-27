@@ -16,7 +16,10 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', 'gs', vim.lsp.buf.signature_help, { noremap=true, buffer=bufnr, desc='(LSP) Signature help' })
   vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, { noremap=true, buffer=bufnr, desc='(LSP) Type Definition' })
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, { noremap=true, buffer=bufnr, desc='(LSP) References' })
-  vim.keymap.set('n', 'gt', open_diagnostics_window, { noremap=true, buffer=bufnr, desc='(LSP) Show Diagnostics' })
+  --vim.keymap.set('n', 'gt', ":lua vim.diagnostic.open_float(nil, {focus=false})<CR>", { noremap=true, buffer=bufnr, desc='(LSP) Show Diagnostics' })
+
+  vim.keymap.set('n', 'gt', function() vim.diagnostic.open_float(nil, {focus=false}) end, { noremap=true, buffer=bufnr, desc='(LSP) Show Diagnostics' })
+
   --- Guard against servers without the signatureHelper capability
   if client.server_capabilities.signatureHelpProvider then
     require('lsp-overloads').setup(client, { })
