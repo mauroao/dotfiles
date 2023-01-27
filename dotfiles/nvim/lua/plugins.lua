@@ -16,6 +16,7 @@ return require('packer').startup(function()
     use 'romgrk/barbar.nvim'                -- Tabs
 
     use 'neovim/nvim-lspconfig'             -- Collection of configurations for built-in LSP client
+    use 'Issafalcon/lsp-overloads.nvim'     -- LSP Overloads
 
     use 'hrsh7th/nvim-cmp'                  -- Completion engine plugin
     use 'hrsh7th/cmp-nvim-lsp'              -- LSP source for nvim-cmp

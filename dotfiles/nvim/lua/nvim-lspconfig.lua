@@ -12,6 +12,10 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', 'gs', vim.lsp.buf.signature_help, { noremap=true, buffer=bufnr, desc='(LSP) Signature help' })
   vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, { noremap=true, buffer=bufnr, desc='(LSP) Type Definition' })
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, { noremap=true, buffer=bufnr, desc='(LSP) References' })
+  --- Guard against servers without the signatureHelper capability
+  if client.server_capabilities.signatureHelpProvider then
+    require('lsp-overloads').setup(client, { })
+  end
 end
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
