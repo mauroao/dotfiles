@@ -118,3 +118,6 @@ require'nvim-treesitter.configs'.setup {
     enable = true
   },
 }
+
+ -- LSP progress
+ require"fidget".setup{}

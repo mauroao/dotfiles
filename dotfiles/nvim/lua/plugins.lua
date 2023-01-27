@@ -27,6 +27,7 @@ return require('packer').startup(function()
     use "rafamadriz/friendly-snippets"      -- a bunch of snippets to use
     use 'folke/which-key.nvim'              -- Popup with key bindings of the command you started typing
     use 'RRethy/vim-illuminate'             -- Highlighting other uses of the word under the cursor
+    use 'j-hui/fidget.nvim'                 -- LSP progress
 
      -- Managing & installing lsp servers
     use("williamboman/mason.nvim")           -- In charge of managing lsp servers, linters & formatters
