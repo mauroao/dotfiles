@@ -19,7 +19,8 @@ end
 
 local function onedark_theme()
   require('onedark').setup {
-    style = 'darker'
+    style = 'warm', -- darker, dark, cool, deep, warm, warmer
+    transparent = true,
   }
   require('onedark').load()
 end
