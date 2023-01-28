@@ -5,7 +5,7 @@ local function vscode_theme()
 
   local c = require('vscode.colors').get_colors()
   require('vscode').setup({
-    transparent = true,
+    transparent = false,
     italic_comments = true,
     disable_nvimtree_bg = true,
     color_overrides = {
@@ -25,8 +25,8 @@ local function onedark_theme()
   require('onedark').load()
 end
 
--- vscode_theme()
-onedark_theme()
+vscode_theme()
+-- onedark_theme()
 
 -- Nvim Tree:
 require'nvim-tree'.setup {
