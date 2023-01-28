@@ -1,7 +1,7 @@
 -- Color Scheme:
 
 local function vscode_theme()
-  vim.o.background = 'dark' -- light
+  vim.o.background = 'dark' -- light, dark
 
   local c = require('vscode.colors').get_colors()
   require('vscode').setup({
@@ -19,8 +19,8 @@ end
 
 local function onedark_theme()
   require('onedark').setup {
-    style = 'warm', -- darker, dark, cool, deep, warm, warmer
-    transparent = true,
+    style = 'darker', -- darker, dark, cool, deep, warm, warmer
+    transparent = false,
   }
   require('onedark').load()
 end
