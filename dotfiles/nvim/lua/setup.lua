@@ -1,5 +1,15 @@
 -- Color Scheme:
 
+local function github_theme()
+  require('github-theme').setup {}
+  -- require('github-theme').load()
+end
+
+local function dracula_theme()
+  require('dracula').setup {}
+  require('dracula').load()
+end
+
 local function vscode_theme()
   vim.o.background = 'dark' -- light, dark
 
@@ -25,8 +35,10 @@ local function onedark_theme()
   require('onedark').load()
 end
 
-vscode_theme()
+-- vscode_theme()
 -- onedark_theme()
+-- dracula_theme()
+github_theme()
 
 -- Nvim Tree:
 require'nvim-tree'.setup {

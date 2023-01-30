@@ -9,6 +9,9 @@ return require('packer').startup(function()
 
   use 'Mofiqul/vscode.nvim'               -- VSCode like theme
   use 'navarasu/onedark.nvim'             -- Dark and Light Themes based on Atom One Dark
+  use 'Mofiqul/dracula.nvim'              -- Dracula theme
+  use ({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' }) -- githu theme
+
   use 'kyazdani42/nvim-tree.lua'          -- File tree
   use 'windwp/nvim-autopairs'             -- Open/close brackets
   use 'nvim-lualine/lualine.nvim'         -- Vim Status bar
