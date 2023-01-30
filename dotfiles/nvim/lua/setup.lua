@@ -1,7 +1,10 @@
 -- Color Scheme:
 
 local function github_theme()
-  require('github-theme').setup {}
+  require('github-theme').setup {
+    theme_style = "dark_default", -- dark, dimmed, dark_default, dark_colorblind, light,light_default, light_colorblind
+     keyword_style = "NONE",
+  }
   -- require('github-theme').load()
 end
 
