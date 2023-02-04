@@ -50,7 +50,22 @@ require'nvim-tree'.setup {}
 require('nvim-autopairs').setup()
 
 -- Lualine
-require('lualine').setup()
+require'lualine'.setup {
+  sections = {
+    lualine_x = {
+      {
+        'fileformat',
+        icons_enabled = true,
+        symbols = {
+          unix = 'LF',
+          dos = 'CRLF',
+          mac = 'CR',
+        },
+      },
+    },
+    lualine_y = {'encoding', 'filetype'}
+  },
+}
 
 -- Telescope
 local actions = require('telescope.actions')
