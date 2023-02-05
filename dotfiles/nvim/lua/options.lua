@@ -28,7 +28,7 @@ opt.wrap = false            -- No wrap lines
 opt.termguicolors = true    -- Enable 24-bit RGB colors
 opt.laststatus=3            -- Set global statusline
 opt.cursorline = true
---opt.list = true
+-- opt.list = true
 opt.listchars = { eol = ''}
 opt.scrolloff = 10
 

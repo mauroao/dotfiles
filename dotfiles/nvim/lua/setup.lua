@@ -6,6 +6,7 @@ local function github_theme()
      keyword_style = "NONE",
   }
   -- require('github-theme').load()
+  vim.api.nvim_command("hi NonText ctermfg=7 guifg=gray")
 end
 
 local function dracula_theme()
