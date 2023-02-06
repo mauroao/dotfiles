@@ -7,6 +7,8 @@ local function github_theme()
   }
   -- require('github-theme').load()
   vim.api.nvim_command("hi NonText ctermfg=7 guifg=gray")
+  vim.api.nvim_command("hi NormalFloat guibg=#161b22")
+  vim.api.nvim_command("set guioptions+=b")
 end
 
 local function dracula_theme()
