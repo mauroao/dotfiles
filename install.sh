@@ -34,6 +34,7 @@ function install_nvm {
 
 download_git_file "git-prompt.sh"
 
+create_symbolic_link ~/.dotfiles/dotfiles/.tmux.conf ~/.tmux.conf
 create_symbolic_link ~/.dotfiles/dotfiles/.zshrc ~/.zshrc
 create_symbolic_link ~/.dotfiles/dotfiles/.vimrc ~/.vimrc
 create_symbolic_link ~/.dotfiles/dotfiles/.gitconfig ~/.gitconfig
