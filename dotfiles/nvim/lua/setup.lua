@@ -7,7 +7,7 @@ local function github_theme()
   }
   -- require('github-theme').load()
   vim.api.nvim_command("hi NonText ctermfg=7 guifg=gray") -- show charactere at end of line when :set list
-  vim.api.nvim_command("hi NormalFloat guibg=#161b22") -- make Floating windows background color better to see
+  vim.api.nvim_command("hi NormalFloat guibg=#313945") -- make Floating windows background color better to see
   vim.api.nvim_command("set guioptions+=b")
 end
 
