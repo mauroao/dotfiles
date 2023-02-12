@@ -7,7 +7,9 @@ local function github_theme()
     overrides = function (c)
       return {
         NormalFloat = { fg = c.fg, bg = "#313945" },
+        Pmenu = { fg = c.fg, bg = "#313945" },
         NonText = { fg = "#d3d3d3"  }
+        -- https://raw.githubusercontent.com/projekt0n/github-nvim-theme/c55aab623fae25e513ec7737c9423c23b11422c0/lua/github-theme/theme.lua
       }
     end
   }
