@@ -102,13 +102,30 @@ require('bufferline').setup {
   tabpages = true,
   closable = true,
   clickable = true,
-  icons = true,
+  icons = {
+    filetype = {
+      enabled
+    },
+    inactive = {
+      separator = {
+        left = '|'
+      }
+    },
+    modified = {
+      button = '●',
+    },
+    button = 'x',
+    pinned = {
+      button = '車'
+    },
+    separator = {
+      left = '|'
+    },
+  },
+  sidebar_filetypes = {
+    NvimTree = true
+  },
   icon_custom_colors = false,
-  icon_separator_active = '|',
-  icon_separator_inactive = '|',
-  icon_close_tab = '',
-  icon_close_tab_modified = '●',
-  icon_pinned = '車',
   insert_at_end = false,
   insert_at_start = false,
   maximum_padding = 1,
@@ -120,18 +137,6 @@ require('bufferline').setup {
 
 -- Wich key
 require('which-key').setup {}
-
--- Table offset (integrating nvim-tree with barbar)
-local nvim_tree_events = require('nvim-tree.events')
-local bufferline_state = require('bufferline.api')
-
-nvim_tree_events.on_tree_open(function ()
-  bufferline_state.set_offset(30, "File Tree")
-end)
-
-nvim_tree_events.on_tree_close(function ()
-  bufferline_state.set_offset(0)
-end)
 
 -- Illuminate
 require('illuminate').configure()
