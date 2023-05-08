@@ -57,6 +57,10 @@ set -o vi
 bindkey -M viins 'jj' vi-cmd-mode
 bindkey -M viins 'jk' vi-cmd-mode
 
+# Java
+export PATH="/opt/homebrew/opt/openjdk/bin/:$PATH"
+export JAVA_HOME="/opt/homebrew/opt/openjdk/"
+
 # Go to Home:
 cd
 
