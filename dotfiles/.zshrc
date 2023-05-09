@@ -61,6 +61,10 @@ bindkey -M viins 'jk' vi-cmd-mode
 export PATH="/opt/homebrew/opt/openjdk/bin/:$PATH"
 export JAVA_HOME="/opt/homebrew/opt/openjdk/"
 
+# Android
+export ANDROID_HOME="$HOME/Library/Android/sdk/"
+export PATH="${HOME}/Library/Android/sdk/tools:${HOME}/Library/Android/sdk/platform-tools:${PATH}"
+
 # Go to Home:
 cd
 
