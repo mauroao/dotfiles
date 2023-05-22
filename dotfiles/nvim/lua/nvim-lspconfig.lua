@@ -62,10 +62,16 @@ for _, server in ipairs(servers) do
   }
 end
 
-local omnisharp_dll_path = vim.fn.stdpath('data') .. '/mason/packages/omnisharp/libexec/OmniSharp.dll'
+require("mason").setup()
+
+require("mason-lspconfig").setup({
+  ensure_installed = servers,
+  automatic_installation = true,
+})
 
 lspconfig.omnisharp.setup {
-    cmd = { "dotnet", omnisharp_dll_path },
+    -- cmd = { "dotnet", 'OmniSharp.dll'},
+    cmd = { "omnisharp" },
     enable_editorconfig_support = true,
     enable_ms_build_load_projects_on_demand = false,
     enable_roslyn_analyzers = false,
@@ -76,13 +82,6 @@ lspconfig.omnisharp.setup {
     capabilities = capabilities,
     on_attach = on_attach,
 }
-
-require("mason").setup()
-
-require("mason-lspconfig").setup({
-  ensure_installed = servers,
-  automatic_installation = true,
-})
 
 local signs = {
   Error = " ",
