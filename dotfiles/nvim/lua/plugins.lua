@@ -16,7 +16,7 @@ return require('packer').startup(function()
   use 'windwp/nvim-autopairs'             -- Open/close brackets
   use 'nvim-lualine/lualine.nvim'         -- Vim Status bar
   use 'gpanders/editorconfig.nvim'        -- Editorconfig
-  use 'nvim-telescope/telescope.nvim'     -- Telescope
+  use { 'nvim-telescope/telescope.nvim', tag = '0.1.0' } -- Telescope
   use 'romgrk/barbar.nvim'                -- Tabs
 
   use 'neovim/nvim-lspconfig'             -- Collection of configurations for built-in LSP client
