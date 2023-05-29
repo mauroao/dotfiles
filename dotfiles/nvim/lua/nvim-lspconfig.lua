@@ -4,7 +4,8 @@ local servers = {
   'tsserver',
   'omnisharp',
   'html',
-  'bashls'
+  'bashls',
+  'dockerls'
 }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -54,6 +55,13 @@ local settings = {
   },
 }
 
+require("mason").setup()
+
+require("mason-lspconfig").setup({
+  ensure_installed = servers,
+  automatic_installation = true,
+})
+
 for _, server in ipairs(servers) do
   lspconfig[server].setup {
     capabilities = capabilities,
@@ -61,13 +69,6 @@ for _, server in ipairs(servers) do
     settings = settings
   }
 end
-
-require("mason").setup()
-
-require("mason-lspconfig").setup({
-  ensure_installed = servers,
-  automatic_installation = true,
-})
 
 lspconfig.omnisharp.setup {
     -- cmd = { "dotnet", 'OmniSharp.dll'},
