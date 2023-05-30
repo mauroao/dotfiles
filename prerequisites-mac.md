@@ -1,6 +1,7 @@
 # Prerequisites for MAC:
 
 - Install NERD FONTS from [here](fonts/);
+  > Install ALL font files!!!!
 - Install [Homebrew](https://brew.sh)
 - Run the commands below:
   ```
