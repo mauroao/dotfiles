@@ -96,7 +96,7 @@ require('telescope').setup {
 }
 
 -- Set barbar's options
-require('bufferline').setup {
+require('barbar').setup {
   animation = true,
   auto_hide = false,
   tabpages = true,
@@ -104,7 +104,8 @@ require('bufferline').setup {
   clickable = true,
   icons = {
     filetype = {
-      enabled = true
+      enabled = true,
+      custom_colors = false,
     },
     inactive = {
       separator = {
@@ -120,6 +121,12 @@ require('bufferline').setup {
     },
     separator = {
       left = '|'
+    },
+    diagnostics = {
+      [vim.diagnostic.severity.ERROR] = {enabled = false},
+      [vim.diagnostic.severity.WARN] = {enabled = false},
+      [vim.diagnostic.severity.INFO] = {enabled = false},
+      [vim.diagnostic.severity.HINT] = {enabled = false},
     },
   },
   sidebar_filetypes = {
@@ -154,7 +161,8 @@ require'nvim-treesitter.configs'.setup {
     "json",
     "bash",
     "markdown",
-    "yaml"
+    "yaml",
+    "dockerfile"
   },
   -- Automatically install missing parsers when entering buffer
   -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
