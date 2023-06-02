@@ -6,11 +6,12 @@ return require('packer').startup(function()
 
   use 'nvim-tree/nvim-web-devicons'       -- used by other plugins
   use 'nvim-lua/plenary.nvim'             -- used by other plugins
+  use 'lewis6991/gitsigns.nvim'           -- OPTIONAL: for git status
 
   use 'Mofiqul/vscode.nvim'               -- VSCode like theme
   use 'navarasu/onedark.nvim'             -- Dark and Light Themes based on Atom One Dark
   use 'Mofiqul/dracula.nvim'              -- Dracula theme
-  use ({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' }) -- githu theme
+  use ({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' }) -- github theme
 
   use 'kyazdani42/nvim-tree.lua'          -- File tree
   use 'windwp/nvim-autopairs'             -- Open/close brackets
