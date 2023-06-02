@@ -4,7 +4,7 @@
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'            -- packer manage it self
 
-  use 'kyazdani42/nvim-web-devicons'      -- used by other plugins
+  use 'nvim-tree/nvim-web-devicons'       -- used by other plugins
   use 'nvim-lua/plenary.nvim'             -- used by other plugins
 
   use 'Mofiqul/vscode.nvim'               -- VSCode like theme

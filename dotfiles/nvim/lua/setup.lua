@@ -104,7 +104,7 @@ require('bufferline').setup {
   clickable = true,
   icons = {
     filetype = {
-      enabled
+      enabled = true
     },
     inactive = {
       separator = {
