@@ -9,14 +9,9 @@ The goal of this project is to provide all required "dot files" to setup a fresh
 
 ## Clone it:
 
-- Using ssh:
-  ```
-   git clone git@github.com:mauroao/dotfiles.git ~/.dotfiles
-  ```
-- Or using http:
-  ```
-  git clone https://github.com/mauroao/dotfiles.git ~/.dotfiles
-  ```
+```
+git clone git@github.com:mauroao/dotfiles.git ~/.dotfiles
+```
 
 ## Install it:
 
