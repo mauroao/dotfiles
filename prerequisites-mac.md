@@ -10,7 +10,7 @@
   ```shell
   brew install --cask iterm2
   ```
-
+- Configure Iterm2 to use Fira Code (size 15 on macbook 13')
 - Run the commands below:
   ```shell
   brew update
