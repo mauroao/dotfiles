@@ -13,12 +13,19 @@
 - Configure Iterm2 to use Fira Code (size 15 on macbook 13')
 - Run the commands below:
   ```shell
-  brew update
   brew install git
   brew install curl
-  brew install neovim
+  brew install wget
   brew install ripgrep
+  ```
+- Install pyenv:
+  ```shell
   brew install pyenv
   ```
+- Install newvim
+  ```shell
+  brew install neovim
+  ```
+
 
 - Install DotNet 6.0 SDK from [here](https://dotnet.microsoft.com/en-us/download/dotnet);
