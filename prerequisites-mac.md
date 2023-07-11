@@ -1,10 +1,14 @@
 # Prerequisites for MAC:
 
-- Install NERD FONTS from [here](fonts/);
-  > Install ALL font files!!!!
 - Install [Homebrew](https://brew.sh)
-- Run the commands below:
+- Install Fira Code Nerd Font:
+  ```shell
+  brew tap homebrew/cask-fonts
+  brew install --cask font-fira-code-nerd-font 
   ```
+
+- Run the commands below:
+  ```shell
   brew update
   brew install --cask iterm2
   brew install git
