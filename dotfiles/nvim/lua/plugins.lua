@@ -11,7 +11,7 @@ return require('packer').startup(function()
   use 'Mofiqul/vscode.nvim'               -- VSCode like theme
   use 'navarasu/onedark.nvim'             -- Dark and Light Themes based on Atom One Dark
   use 'Mofiqul/dracula.nvim'              -- Dracula theme
-  use ({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' }) -- github theme
+  use { 'projekt0n/github-nvim-theme', tag = 'v0.0.7' } -- github theme
 
   use 'kyazdani42/nvim-tree.lua'          -- File tree
   use 'windwp/nvim-autopairs'             -- Open/close brackets
@@ -32,7 +32,7 @@ return require('packer').startup(function()
   use "rafamadriz/friendly-snippets"      -- a bunch of snippets to use
   use 'folke/which-key.nvim'              -- Popup with key bindings of the command you started typing
   use 'RRethy/vim-illuminate'             -- Highlighting other uses of the word under the cursor
-  use 'j-hui/fidget.nvim'                 -- LSP progress
+  use { 'j-hui/fidget.nvim', tag = 'legacy' } -- LSP progress
 
   -- Managing & installing lsp servers
   use("williamboman/mason.nvim")           -- In charge of managing lsp servers, linters & formatters
