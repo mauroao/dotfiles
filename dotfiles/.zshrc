@@ -19,7 +19,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWCOLORHINTS=1
 
-export GIT_EDITOR=nvim
+export GIT_EDITOR=lvim
 
 export SAVEHIST=1000
 
@@ -29,7 +29,7 @@ if [[ "$OSTYPE" == "linux"* ]]; then
 fi
 
 alias ll="ls -la "
-alias vim="nvim"
+alias vim="lvim"
 alias g="git"
 
 # Run autosuggestions:
