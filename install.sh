@@ -51,6 +51,7 @@ create_symbolic_link ~/.dotfiles/dotfiles/nvim/lua/nvim-cmp.lua ~/.config/nvim/l
 create_symbolic_link ~/.dotfiles/dotfiles/nvim/lua/nvim-lspconfig.lua ~/.config/nvim/lua/nvim-lspconfig.lua
 create_symbolic_link ~/.dotfiles/dotfiles/nvim/lua/lspsaga-nvim.lua ~/.config/nvim/lua/lspsaga-nvim.lua
 create_symbolic_link ~/.dotfiles/dotfiles/lvim/config.lua ~/.config/lvim/config.lua
+create_symbolic_link ~/.dotfiles/dotfiles/.vimrc ~/.ideavimrc
 
 install_packer
 
