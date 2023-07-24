@@ -28,7 +28,7 @@ if [[ "$OSTYPE" == "linux"* ]]; then
     alias ls="ls --color=auto"
 fi
 
-alias ll="ls -la "
+alias ll="ls -lah "
 alias vim="lvim"
 alias g="git"
 
