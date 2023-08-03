@@ -13,8 +13,6 @@
   sudo apt install curl -y && \
   sudo apt install ripgrep -y && \
   sudo apt install unzip -y && \
-  curl -sL https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb -o nvim-linux64.deb && \
-  sudo apt install ./nvim-linux64.deb -y && \
   sudo apt install gcc -y && \
   sudo apt install g++ -y && \
   sudo apt install python3.8-venv -y && \
@@ -71,4 +69,6 @@
     - Color Scheme: Tango Dark;
     - Font weight: Medium
 
+- Install Neovim 0.9.1+ from [here](https://github.com/neovim/neovim/releases)
+- Install LunarVim from [here](https://www.lunarvim.org/)
 
