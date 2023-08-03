@@ -65,8 +65,12 @@ export JAVA_HOME="/opt/homebrew/opt/openjdk/"
 export ANDROID_HOME="$HOME/Library/Android/sdk/"
 export PATH="${HOME}/Library/Android/sdk/tools:${HOME}/Library/Android/sdk/platform-tools:${PATH}"
 
+# Nvim on ubuntu
+export PATH="/usr/bin/nvim.0.9.1/bin:${PATH}"
+
 # Lvim
 export PATH="${HOME}/.local/bin:${PATH}"
+
 
 # Go to Home:
 cd
