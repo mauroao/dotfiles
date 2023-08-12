@@ -64,10 +64,10 @@
   ```
 
 - Install Windows Terminal from Microsoft Store;
-- Configure Ubuntu 20.04.4 LTS on Windows Terminal:
+- Configure Ubuntu 22.04.2 LTS on Windows Terminal:
   - Command line:
     ```
-    C:\WINDOWS\system32\wsl.exe -d Ubuntu-20.04 zsh
+    C:\WINDOWS\system32\wsl.exe -d Ubuntu-22.04 Ubuntu-20.04 zsh
     ```
   - Appearance:
     - Font face: SauceCodePro Nerd Font;
