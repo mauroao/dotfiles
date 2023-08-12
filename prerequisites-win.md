@@ -21,7 +21,7 @@
   sudo apt install unzip -y && \
   sudo apt install gcc -y && \
   sudo apt install g++ -y && \
-  sudo apt install python3.10-venv \
+  sudo apt install python3.10-venv && \
   sudo apt install python3-pip -y
   ```
 
