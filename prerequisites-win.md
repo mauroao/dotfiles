@@ -1,13 +1,19 @@
-# Prerequisites for Ubuntu 20.04 on WSL:
+# Prerequisites for Ubuntu 22.04.02 LTS on WSL:
 
 - Install NERD FONTS from [here](fonts/);
   > Install ALL font files!!!!
 - Install [WSL](https://docs.microsoft.com/en-us/windows/wsl/install);
-- Install [Ubuntu](https://apps.microsoft.com/store/detail/ubuntu-2004/9N6SVWS3RX71?hl=pt-br&gl=BR);
+- Install Ubuntu 22.04.02 LTS from Microsot Store;
 - Install [Docker Desktop](https://www.docker.com/products/docker-desktop/);
+
 - Open Ubuntu and run the commands below:
   ```
-  sudo apt update && \
+  sudo apt update && sudo apt upgrade -y 
+  ```
+
+
+- Open Ubuntu and run the commands below:
+  ```
   sudo apt install zsh -y && \
   sudo apt install git -y && \
   sudo apt install curl -y && \
