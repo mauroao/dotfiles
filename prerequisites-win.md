@@ -52,8 +52,8 @@
   ```
   rm -rf ~/.ssh/ && \
   mkdir ~/.ssh/ && \
-  cp /mnt/c/Users/maurooliveira/.ssh/id* ~/.ssh/ && \
-  cp /mnt/c/Users/maurooliveira/.ssh/config ~/.ssh/config && \
+  cp /mnt/c/Users/mauro/.ssh/id* ~/.ssh/ && \
+  cp /mnt/c/Users/mauro/.ssh/config ~/.ssh/config && \
   chmod 600 ~/.ssh/id*
   ```
 
