@@ -4,7 +4,7 @@ The goal of this project is to provide all required "dot files" to setup a fresh
 
 ## Install prerequisites
 
-- [Ubuntu 20.04 on WSL](prerequisites-win.md)
+- [Ubuntu 22.04.02 LTS on WSL](prerequisites-win.md)
 - [Mac](prerequisites-mac.md)
 
 ## Clone it:
