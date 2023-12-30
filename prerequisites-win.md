@@ -52,7 +52,12 @@
   sudo apt-get update && \
   sudo apt-get install -y dotnet-sdk-6.0
   ```
-
+  
+- Install Go
+  ```
+  sudo apt update && sudo apt -y install golang-go 
+  ```
+  
 - Copy SSH Keys from windows host (check windows home user):
   ```
   rm -rf ~/.ssh/ && \
