@@ -44,7 +44,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.dotnet/tools/:$PATH"
 
 # Deno:
-export DENO_INSTALL="/home/mauro/.deno"
+export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Pyenv stuff:
@@ -65,6 +65,11 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home"
 # Android
 export ANDROID_HOME="$HOME/Library/Android/sdk/"
 export PATH="${HOME}/Library/Android/sdk/tools:${HOME}/Library/Android/sdk/platform-tools:${PATH}"
+
+# Nvim on Ubuntu
+if [[ "$OSTYPE" == "linux"* ]]; then
+    export PATH="${HOME}/nvim-linux64/bin:${PATH}"
+fi
 
 # Lvim
 export PATH="${HOME}/.local/bin:${PATH}"

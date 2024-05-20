@@ -1,23 +1,26 @@
-# Prerequisites for Ubuntu 20.04 on WSL:
+# Prerequisites for Ubuntu 22.04.02 LTS on WSL:
 
 - Install NERD FONTS from [here](fonts/);
   > Install ALL font files!!!!
 - Install [WSL](https://docs.microsoft.com/en-us/windows/wsl/install);
-- Install [Ubuntu](https://apps.microsoft.com/store/detail/ubuntu-2004/9N6SVWS3RX71?hl=pt-br&gl=BR);
+- Install Ubuntu 22.04.02 LTS from Microsot Store;
 - Install [Docker Desktop](https://www.docker.com/products/docker-desktop/);
+
 - Open Ubuntu and run the commands below:
   ```
-  sudo apt update && \
+  sudo apt update && sudo apt upgrade -y 
+  ```
+
+- Open Ubuntu and run the commands below:
+  ```
   sudo apt install zsh -y && \
   sudo apt install git -y && \
   sudo apt install curl -y && \
   sudo apt install ripgrep -y && \
   sudo apt install unzip -y && \
-  curl -sL https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb -o nvim-linux64.deb && \
-  sudo apt install ./nvim-linux64.deb -y && \
   sudo apt install gcc -y && \
   sudo apt install g++ -y && \
-  sudo apt install python3.8-venv -y && \
+  sudo apt install python3.10-venv && \
   sudo apt install python3-pip -y
   ```
 
@@ -49,26 +52,33 @@
   sudo apt-get update && \
   sudo apt-get install -y dotnet-sdk-6.0
   ```
-
+  
+- Install Go
+  ```
+  sudo apt update && sudo apt -y install golang-go 
+  ```
+  
 - Copy SSH Keys from windows host (check windows home user):
   ```
   rm -rf ~/.ssh/ && \
   mkdir ~/.ssh/ && \
-  cp /mnt/c/Users/maurooliveira/.ssh/id* ~/.ssh/ && \
-  cp /mnt/c/Users/maurooliveira/.ssh/config ~/.ssh/config && \
+  cp /mnt/c/Users/mauro/.ssh/id* ~/.ssh/ && \
+  cp /mnt/c/Users/mauro/.ssh/config ~/.ssh/config && \
   chmod 600 ~/.ssh/id*
   ```
 
 - Install Windows Terminal from Microsoft Store;
-- Configure Ubuntu 20.04.4 LTS on Windows Terminal:
+- Configure Ubuntu 22.04.2 LTS on Windows Terminal:
   - Command line:
     ```
-    C:\WINDOWS\system32\wsl.exe -d Ubuntu-20.04 zsh
+    C:\WINDOWS\system32\wsl.exe -d Ubuntu-22.04 zsh
     ```
   - Appearance:
     - Font face: SauceCodePro Nerd Font;
     - Font size: 13;
     - Color Scheme: Tango Dark;
     - Font weight: Medium
-
+- Install NVM from [here](https://github.com/nvm-sh/nvm#install--update-script) 
+- Install Neovim 0.9.1+ from [here](https://github.com/neovim/neovim/releases)
+- Install LunarVim from [here](https://www.lunarvim.org/)
 
