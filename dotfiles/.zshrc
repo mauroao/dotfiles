@@ -58,8 +58,9 @@ bindkey -M viins 'jj' vi-cmd-mode
 bindkey -M viins 'jk' vi-cmd-mode
 
 # Java
-export PATH="/opt/homebrew/opt/openjdk/bin/:$PATH"
-export JAVA_HOME="/opt/homebrew/opt/openjdk/"
+# export PATH="/opt/homebrew/opt/openjdk/bin/:$PATH"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home"
+
 
 # Android
 export ANDROID_HOME="$HOME/Library/Android/sdk/"
