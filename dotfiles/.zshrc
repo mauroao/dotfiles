@@ -71,6 +71,9 @@ if [[ "$OSTYPE" == "linux"* ]]; then
     export PATH="${HOME}/nvim-linux64/bin:${PATH}"
 fi
 
+# Go
+export PATH="${HOME}/go/bin:${PATH}"
+
 # Lvim
 export PATH="${HOME}/.local/bin:${PATH}"
 
