@@ -17,6 +17,7 @@
   brew install curl
   brew install wget
   brew install ripgrep
+  brew install fzf
   ```
 - Install pyenv:
   ```shell
