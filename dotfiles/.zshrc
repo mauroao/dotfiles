@@ -72,7 +72,9 @@ if [[ "$OSTYPE" == "linux"* ]]; then
 fi
 
 # Go
-export PATH="${HOME}/go/bin:${PATH}"
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # Lvim
 export PATH="${HOME}/.local/bin:${PATH}"
