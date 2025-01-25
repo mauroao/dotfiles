@@ -79,6 +79,8 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 # Lvim
 export PATH="${HOME}/.local/bin:${PATH}"
 
-# Go to Home:
-cd
+# Go to Home if it is not inside TMUX session:
+if [[ -z "$TMUX" ]]; then
+  cd
+fi
 
