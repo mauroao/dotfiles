@@ -3,6 +3,7 @@ vim.api.nvim_set_keymap('i', 'jk',         '<ESC>',                     { norema
 
 -- for dotnet
 lvim.plugins = {
+  { "editorconfig/editorconfig-vim" },
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",
