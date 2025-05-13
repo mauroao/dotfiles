@@ -59,8 +59,9 @@ bindkey -M viins 'jk' vi-cmd-mode
 
 # Java
 # export PATH="/opt/homebrew/opt/openjdk/bin/:$PATH"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home"
-
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home/"
+fi
 
 # Android
 export ANDROID_HOME="$HOME/Library/Android/sdk/"
