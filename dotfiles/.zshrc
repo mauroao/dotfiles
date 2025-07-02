@@ -65,7 +65,7 @@ fi
 
 # Android
 export ANDROID_HOME="$HOME/Library/Android/sdk/"
-export PATH="${HOME}/Library/Android/sdk/tools:${HOME}/Library/Android/sdk/platform-tools:${PATH}"
+export PATH="${HOME}/Library/Android/sdk/cmdline-tools/latest/bin:${HOME}/Library/Android/sdk/platform-tools:${PATH}"
 
 # Nvim on Ubuntu
 if [[ "$OSTYPE" == "linux"* ]]; then
