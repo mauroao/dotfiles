@@ -23,5 +23,6 @@ git clone git@github.com:mauroao/dotfiles.git ~/.dotfiles
 
 - Node.js
   ```
-  nvm install 16.16.0 && nvm use 16.16.0
+  nvm install --lts
+  nvm alias default node
   ```
