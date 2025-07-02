@@ -16,7 +16,8 @@ git clone git@github.com:mauroao/dotfiles.git ~/.dotfiles
 ## Install it:
 
 ```
-. ~/.dotfiles/install.sh
+. ~/.dotfiles/setup_lazy_vim.sh
+. ~/.create_links.sh
 ```
 
 ## Install more stuff
