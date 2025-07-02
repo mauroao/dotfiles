@@ -4,7 +4,7 @@
 - Install Fira Code Nerd Font:
   ```shell
   brew tap homebrew/cask-fonts
-  brew install --cask font-fira-code-nerd-font 
+  brew install --cask font-fira-code-nerd-font
   ```
 - Install Iterm2:
   ```shell
@@ -23,7 +23,7 @@
   ```shell
   brew install pyenv
   ```
-- Install newvim
+- Install neovim
   ```shell
   brew install neovim
   ```

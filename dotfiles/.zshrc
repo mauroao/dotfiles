@@ -19,7 +19,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWCOLORHINTS=1
 
-export GIT_EDITOR=lvim
+export GIT_EDITOR=nvim
 
 export SAVEHIST=1000
 
@@ -29,7 +29,7 @@ if [[ "$OSTYPE" == "linux"* ]]; then
 fi
 
 alias ll="ls -lah "
-alias vim="lvim"
+alias vim="nvim"
 alias g="git"
 
 # Run autosuggestions:
@@ -69,7 +69,7 @@ export PATH="${HOME}/Library/Android/sdk/cmdline-tools/latest/bin:${HOME}/Librar
 
 # Nvim on Ubuntu
 if [[ "$OSTYPE" == "linux"* ]]; then
-    export PATH="${HOME}/nvim-linux64/bin:${PATH}"
+    export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 fi
 
 # Go

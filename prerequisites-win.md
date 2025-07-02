@@ -8,7 +8,7 @@
 
 - Open Ubuntu and run the commands below:
   ```
-  sudo apt update && sudo apt upgrade -y 
+  sudo apt update && sudo apt upgrade -y
   ```
 
 - Open Ubuntu and run the commands below:
@@ -23,7 +23,7 @@
   sudo apt install python3.10-venv && \
   sudo apt install python3-pip -y
   sudo apt install fzf -y
-  
+
   ```
 
 - Run more commands below (prerequisites for pyenv):
@@ -38,7 +38,7 @@
   curl https://pyenv.run | bash
   ```
 
-- Install Netcore 3.1 and Dotnet 6.0
+- Install Netcore 8.0
   ```
   wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
   sudo dpkg -i packages-microsoft-prod.deb
@@ -47,19 +47,14 @@
 
   ```
   sudo apt-get update && \
-  sudo apt-get install -y dotnet-sdk-3.1
+  sudo apt-get install -y dotnet-sdk-8.0
   ```
 
-  ```
-  sudo apt-get update && \
-  sudo apt-get install -y dotnet-sdk-6.0
-  ```
-  
 - Install Go
   ```
-  sudo apt update && sudo apt -y install golang-go 
+  sudo apt update && sudo apt -y install golang-go
   ```
-  
+
 - Copy SSH Keys from windows host (check windows home user):
   ```
   rm -rf ~/.ssh/ && \
@@ -80,7 +75,6 @@
     - Font size: 13;
     - Color Scheme: Tango Dark;
     - Font weight: Medium
-- Install NVM from [here](https://github.com/nvm-sh/nvm#install--update-script) 
+- Install NVM from [here](https://github.com/nvm-sh/nvm#install--update-script)
 - Install Neovim 0.9.1+ from [here](https://github.com/neovim/neovim/releases)
-- Install LunarVim from [here](https://www.lunarvim.org/)
 
