@@ -77,5 +77,4 @@
     - Font weight: Medium
 - Install NVM from [here](https://github.com/nvm-sh/nvm#install--update-script)
 - Install Neovim 0.9.1+ from [here](https://github.com/neovim/neovim/releases)
-- Install LunarVim from [here](https://www.lunarvim.org/)
 
