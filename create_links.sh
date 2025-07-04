@@ -11,4 +11,4 @@ create_symbolic_link ~/.dotfiles/dotfiles/.gitconfig ~/.gitconfig
 create_symbolic_link ~/.dotfiles/dotfiles/.vimrc ~/.ideavimrc
 create_symbolic_link ~/.dotfiles/dotfiles/nvim/keymaps.lua ~/.config/nvim/lua/config/keymaps.lua
 create_symbolic_link ~/.dotfiles/dotfiles/nvim/options.lua ~/.config/nvim/lua/config/options.lua
-create_symbolic_link ~/.dotfiles/dotfiles/nvim/plugins.lua ~/.config/nvim/lua/plugins/plugins.lua
+# create_symbolic_link ~/.dotfiles/dotfiles/nvim/plugins.lua ~/.config/nvim/lua/plugins/plugins.lua
