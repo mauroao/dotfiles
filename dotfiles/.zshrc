@@ -57,10 +57,9 @@ set -o vi
 bindkey -M viins 'jj' vi-cmd-mode
 bindkey -M viins 'jk' vi-cmd-mode
 
-# Java
-# export PATH="/opt/homebrew/opt/openjdk/bin/:$PATH"
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home/"
+    export DOTNET_ROOT="/usr/local/share/dotnet"
 fi
 
 # Android
