@@ -1,0 +1,5 @@
+
+# Shared shell config (git prompt, vi mode, custom prompt)
+if [ -f ~/.bashrc_common.sh ]; then
+  source ~/.bashrc_common.sh
+fi

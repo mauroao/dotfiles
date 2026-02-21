@@ -4,6 +4,7 @@ function create_symbolic_link() {
   echo "created link $2"
 }
 
+create_symbolic_link ~/.dotfiles/dotfiles/.bashrc_common.sh ~/.bashrc_common.sh
 create_symbolic_link ~/.dotfiles/dotfiles/.tmux.conf ~/.tmux.conf
 create_symbolic_link ~/.dotfiles/dotfiles/.zshrc ~/.zshrc
 create_symbolic_link ~/.dotfiles/dotfiles/.vimrc ~/.vimrc
