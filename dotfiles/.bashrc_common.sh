@@ -9,11 +9,6 @@ if [[ -z "$WARP_IS_LOCAL_SHELL_SESSION" ]]; then
   export GIT_PS1_COLOR_PRE=""
   export GIT_PS1_COLOR_POST=""
 
-  # Vi mode
-  set -o vi
-  bind '"jj": vi-movement-mode'
-  bind '"jk": vi-movement-mode'
-
   # Primeira linha do prompt
   __prompt_command() {
     local dir="${PWD/#$HOME/\~}"
@@ -35,6 +30,9 @@ if [[ -z "$WARP_IS_LOCAL_SHELL_SESSION" ]]; then
   set -o vi
   bind -m vi-insert '"jj": vi-movement-mode'
   bind -m vi-insert '"jk": vi-movement-mode'
+
+  export VISUAL=vim
+  export EDITOR=vim
 fi
 
 alias ll="ls -lah "
