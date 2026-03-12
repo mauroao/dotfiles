@@ -35,7 +35,7 @@ if [[ -z "$WARP_IS_LOCAL_SHELL_SESSION" ]]; then
   export EDITOR=vim
 fi
 
-alias ll="ls -lah "
+alias ll="ls -lah --group-directories-first "
 alias vim="nvim"
 alias g="git"
 
