@@ -97,3 +97,5 @@ export PATH="${HOME}/.local/bin:${PATH}"
 if [[ -z "$TMUX" ]]; then
   cd
 fi
+
+export COMFY_FOLDER=/Users/mauro/comfy
