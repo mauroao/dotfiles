@@ -1,6 +1,6 @@
 # Mauro's DotFiles
 
-The goal of this project is to provide all required "dot files" to setup a fresh new computer environment, **running on ZSH** shell.
+The goal of this project is to setup all dotfiles for MacOS and Ubuntu (bare metal or WSL).
 
 ## Install prerequisites
 

@@ -29,4 +29,4 @@
   ```
 
 
-- Install DotNet 6.0 SDK from [here](https://dotnet.microsoft.com/en-us/download/dotnet);
+- Install DotNet SDK from [here](https://dotnet.microsoft.com/en-us/download/dotnet);

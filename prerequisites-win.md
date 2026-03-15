@@ -3,7 +3,7 @@
 - Install NERD FONTS from [here](fonts/);
   > Install ALL font files!!!!
 - Install [WSL](https://docs.microsoft.com/en-us/windows/wsl/install);
-- Install Ubuntu 22.04.02 LTS from Microsot Store;
+- Install Ubuntu LTS from Microsot Store;
 - Install [Docker Desktop](https://www.docker.com/products/docker-desktop/);
 
 - Open Ubuntu and run the commands below:
@@ -13,7 +13,6 @@
 
 - Open Ubuntu and run the commands below:
   ```
-  sudo apt install zsh -y && \
   sudo apt install git -y && \
   sudo apt install curl -y && \
   sudo apt install ripgrep -y && \
@@ -38,16 +37,7 @@
   curl https://pyenv.run | bash
   ```
 
-- Install Netcore 8.0
-  ```
-  wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-  sudo dpkg -i packages-microsoft-prod.deb
-  rm packages-microsoft-prod.deb
-  ```
-
-  ```
-  sudo apt-get update && \
-  sudo apt-get install -y dotnet-sdk-8.0
+- Install Netcore
   ```
 
 - Install Go
@@ -66,12 +56,8 @@
 
 - Install Windows Terminal from Microsoft Store;
 - Configure Ubuntu 22.04.2 LTS on Windows Terminal:
-  - Command line:
-    ```
-    C:\WINDOWS\system32\wsl.exe -d Ubuntu-22.04 zsh
-    ```
   - Appearance:
-    - Font face: SauceCodePro Nerd Font;
+    - Font face: Firacode Nerd Font;
     - Font size: 13;
     - Color Scheme: Tango Dark;
     - Font weight: Medium
