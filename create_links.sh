@@ -1,14 +1,15 @@
-function create_symbolic_link() {
-  rm -rf $2
-  ln -s $1 $2
-  echo "created link $2"
-}
+#!/usr/bin/env bash
+set -eE
 
-create_symbolic_link ~/.dotfiles/dotfiles/.bashrc_common.sh ~/.bashrc_common.sh
-create_symbolic_link ~/.dotfiles/dotfiles/.tmux.conf ~/.tmux.conf
-create_symbolic_link ~/.dotfiles/dotfiles/.zshrc ~/.zshrc
-create_symbolic_link ~/.dotfiles/dotfiles/.vimrc ~/.vimrc
-create_symbolic_link ~/.dotfiles/dotfiles/.vimrc ~/.ideavimrc
-create_symbolic_link ~/.dotfiles/dotfiles/.gitconfig ~/.gitconfig
-create_symbolic_link ~/.dotfiles/dotfiles/nvim/keymaps.lua ~/.config/nvim/lua/config/keymaps.lua
-create_symbolic_link ~/.dotfiles/dotfiles/nvim/options.lua ~/.config/nvim/lua/config/options.lua
+trap 'echo -e "\033[0;31mError on line $LINENO. Exiting.\033[0m" >&2; exit $?' ERR
+
+ln -sf ~/.dotfiles/dotfiles/.bashrc_common.sh ~/.bashrc_common.sh
+ln -sf ~/.dotfiles/dotfiles/.tmux.conf ~/.tmux.conf
+ln -sf ~/.dotfiles/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/.dotfiles/dotfiles/.vimrc ~/.vimrc
+ln -sf ~/.dotfiles/dotfiles/.vimrc ~/.ideavimrc
+ln -sf ~/.dotfiles/dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/.dotfiles/dotfiles/nvim/keymaps.lua ~/.config/nvim/lua/config/keymaps.lua
+ln -sf ~/.dotfiles/dotfiles/nvim/options.lua ~/.config/nvim/lua/config/options.lua
+
+echo -e "\033[0;32mAll links created successfully.\033[0m"
