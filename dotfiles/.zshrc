@@ -11,7 +11,8 @@ if [[ -z "$WARP_IS_LOCAL_SHELL_SESSION" ]]; then
   source ~/.git-prompt.sh
   NEWLINE=$'\n'
   LAMBDA='%B%F{166}λ%f%b'
-  setopt PROMPT_SUBST ; PS1='%n@%m %B%F{blue}%d%f%b $(__git_ps1 "( %s)") ${NEWLINE}${LAMBDA}'
+  export VIRTUAL_ENV_DISABLE_PROMPT=1
+  setopt PROMPT_SUBST ; PS1='${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV)) }%n@%m %B%F{blue}%d%f%b $(__git_ps1 "(%s)") ${NEWLINE}${LAMBDA}'
 
   export GIT_PS1_SHOWDIRTYSTATE=1
   export GIT_PS1_SHOWUNTRACKEDFILES=1
