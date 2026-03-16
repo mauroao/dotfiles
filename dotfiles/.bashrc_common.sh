@@ -9,12 +9,19 @@ if [[ -z "$WARP_IS_LOCAL_SHELL_SESSION" ]]; then
   export GIT_PS1_COLOR_PRE=""
   export GIT_PS1_COLOR_POST=""
 
+  export VIRTUAL_ENV_DISABLE_PROMPT=1
+
   # Primeira linha do prompt
   __prompt_command() {
     local dir="${PWD/#$HOME/\~}"
-    printf '%s@%s \033[1;34m%s\033[0m%s\n' \
+    local venv=""
+    if [[ -n "$VIRTUAL_ENV" ]]; then
+        venv=" ($(basename "$VIRTUAL_ENV"))"
+    fi
+    printf '%s@%s \033[1;34m%s\033[0m%s%s\n' \
       "$USER" "${HOSTNAME%%.*}" "$dir" \
-      "$(__git_ps1 " ( %s)")"
+      "$(__git_ps1 " ( %s)")" \
+      "$venv"
   }
   PROMPT_COMMAND=__prompt_command
 
