@@ -3,6 +3,14 @@ set -eE
 
 trap 'echo -e "\033[0;31mError on line $LINENO. Exiting.\033[0m" >&2; exit $?' ERR
 
+readonly BASHRC_COMMON_BLOCK=$(cat <<'EOF'
+# Shared shell config (git prompt, vi mode, custom prompt)
+if [ -f ~/.bashrc_common.sh ]; then
+  source ~/.bashrc_common.sh
+fi
+EOF
+)
+
 function download_git_file() {
   local dest=~/".$1"
   if [ -f "$dest" ]; then
@@ -18,11 +26,33 @@ function install_autosuggestions() {
     echo "Skipping zsh-autosuggestions: not running on macOS."
     return
   fi
+
+  if [ -d ~/.zsh/zsh-autosuggestions ]; then
+    echo "Skipping zsh-autosuggestions: already installed."
+    return
+  fi
+
   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions 2>/dev/null
   echo "zsh-autosuggestions installed."
 }
 
+function ensure_bashrc_common_block() {
+  local bashrc_file=~/.bashrc
+  local bashrc_common_reference='~/.bashrc_common.sh'
+
+  touch "$bashrc_file"
+
+  if grep -Fq "$bashrc_common_reference" "$bashrc_file"; then
+    echo "~/.bashrc already contains the shared shell config block."
+    return
+  fi
+
+  printf '\n%s\n' "$BASHRC_COMMON_BLOCK" >> "$bashrc_file"
+  echo "Shared shell config block added to ~/.bashrc."
+}
+
 download_git_file "git-prompt.sh"
 install_autosuggestions
+ensure_bashrc_common_block
 
 echo -e "\033[0;32mAll installations completed successfully.\033[0m"
