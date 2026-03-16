@@ -41,3 +41,9 @@ alias g="git"
 alias bcat="batcat"
 
 export GIT_EDITOR=nvim
+
+if [[ -d "$HOME/.pyenv" ]]; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init - bash)"
+fi
