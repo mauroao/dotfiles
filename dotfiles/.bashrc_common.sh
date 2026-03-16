@@ -38,5 +38,6 @@ fi
 alias ll="ls -lah --group-directories-first "
 alias vim="nvim"
 alias g="git"
+alias bcat="batcat"
 
 export GIT_EDITOR=nvim
