@@ -9,6 +9,7 @@ ln -sf ~/.dotfiles/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/.dotfiles/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/.dotfiles/dotfiles/.vimrc ~/.ideavimrc
 ln -sf ~/.dotfiles/dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/.dotfiles/dotfiles/.wezterm.lua ~/.wezterm.lua
 
 # NVIM files:
 mkdir -p ~/.config/nvim/lua/config/
