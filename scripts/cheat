@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+usage() {
+  echo "Uso: cheat <tema>"
+}
+
+if [ "$#" -ne 1 ]; then
+  usage
+  exit 1
+fi
+
+curl -fsS "cheat.sh/$1" | batcat
