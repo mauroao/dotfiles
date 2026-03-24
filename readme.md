@@ -4,7 +4,7 @@ The goal of this project is to setup all dotfiles for MacOS and Ubuntu (bare met
 
 ## Install prerequisites
 
-- [Ubuntu 22.04.02 LTS on WSL](prerequisites-win.md)
+- [Ubuntu LTS on WSL](prerequisites-win.md)
 - [Mac](prerequisites-mac.md)
 
 ## Clone it:
