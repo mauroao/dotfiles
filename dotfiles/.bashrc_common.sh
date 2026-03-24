@@ -40,6 +40,14 @@ if [[ -z "$WARP_IS_LOCAL_SHELL_SESSION" ]]; then
 
   export VISUAL=vim
   export EDITOR=vim
+
+  if [ -f /etc/bash_completion ]; then
+    source /etc/bash_completion
+  fi
+
+  if [ -f ~/.tmux-bash-completion/completions/tmux ]; then
+    source ~/.tmux-bash-completion/completions/tmux
+  fi
 fi
 
 alias ll="ls -lah --group-directories-first "
@@ -53,12 +61,4 @@ if [[ -d "$HOME/.pyenv" ]]; then
   export PYENV_ROOT="$HOME/.pyenv"
   [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init - bash)"
-fi
-
-if [ -f /etc/bash_completion ]; then
-  . /etc/bash_completion
-fi
-
-if [ -f ~/.tmux-bash-completion/completions/tmux ]; then
-  source ~/.tmux-bash-completion/completions/tmux
 fi
