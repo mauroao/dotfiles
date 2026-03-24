@@ -36,7 +36,27 @@ function install_autosuggestions() {
   echo "zsh-autosuggestions installed."
 }
 
+function install_tmux_bash_completion() {
+  if [[ "$(uname)" == "Darwin" ]]; then
+    echo "Skipping tmux-bash-completion: running on macOS."
+    return
+  fi
+
+  if [ -d ~/.tmux-bash-completion ]; then
+    echo "Skipping tmux-bash-completion: already installed."
+    return
+  fi
+
+  git clone https://github.com/imomaliev/tmux-bash-completion.git ~/.tmux-bash-completion
+  echo "tmux-bash-completion installed."
+}
+
 function ensure_bashrc_common_block() {
+  if [[ "$(uname)" == "Darwin" ]]; then
+    echo "Skipping ~/.bashrc common block: running on macOS."
+    return
+  fi
+
   local bashrc_file=~/.bashrc
   local bashrc_common_reference='~/.bashrc_common.sh'
 
@@ -53,6 +73,7 @@ function ensure_bashrc_common_block() {
 
 download_git_file "git-prompt.sh"
 install_autosuggestions
+install_tmux_bash_completion
 ensure_bashrc_common_block
 
 echo -e "\033[0;32mAll installations completed successfully.\033[0m"

@@ -16,7 +16,7 @@ if [[ -z "$WARP_IS_LOCAL_SHELL_SESSION" ]]; then
     local dir="${PWD/#$HOME/\~}"
     local venv=""
     if [[ -n "$VIRTUAL_ENV" ]]; then
-        venv=" ($(basename "$VIRTUAL_ENV"))"
+      venv=" ($(basename "$VIRTUAL_ENV"))"
     fi
     printf '%s@%s \033[1;34m%s\033[0m%s%s\n' \
       "$USER" "${HOSTNAME%%.*}" "$dir" \
@@ -53,4 +53,12 @@ if [[ -d "$HOME/.pyenv" ]]; then
   export PYENV_ROOT="$HOME/.pyenv"
   [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init - bash)"
+fi
+
+if [ -f /etc/bash_completion ]; then
+  . /etc/bash_completion
+fi
+
+if [ -f ~/.tmux-bash-completion/completions/tmux ]; then
+  source ~/.tmux-bash-completion/completions/tmux
 fi
